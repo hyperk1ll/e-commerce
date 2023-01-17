@@ -19,7 +19,7 @@
     <!-- inject:css -->
     <link rel="stylesheet" href="{{ asset('admin/css/style.css') }}">
     <!-- endinject -->
-    <link rel="shortcut icon" href="{{  asset('admin/images/favicon.png') }}" />
+    <link rel="shortcut icon" href="{{  asset('admin/images/mtu.transparent.png') }}" />
 
     @livewireStyles
 
