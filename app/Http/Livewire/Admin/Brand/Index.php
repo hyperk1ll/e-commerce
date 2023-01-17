@@ -2,8 +2,9 @@
 
 namespace App\Http\Livewire\Admin\Brand;
 
-use Livewire\Component;
+use session;
 use App\Models\Brand;
+use Livewire\Component;
 use Illuminate\Support\Str;
 use Livewire\WithPagination;
 
