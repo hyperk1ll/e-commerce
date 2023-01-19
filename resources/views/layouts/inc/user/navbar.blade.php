@@ -1,12 +1,12 @@
 <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
     <div class="navbar-brand-wrapper d-flex justify-content-center">
       <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100"> 
-        <a class="navbar-brand brand-logo" style="font-weight: 400; font-family: 'Raleway', sans-serif; font-size: 11px; text-transform:uppercase; margin-right:10px" href="{{ url('admin/dashboard') }}">
+        <a class="navbar-brand brand-logo" style="font-weight: 400; font-family: 'Raleway', sans-serif; font-size: 11px; text-transform:uppercase; margin-right:10px" href="">
           <img src="images/mtu-mini.svg" alt="logo" style="width: 40px;"/> 
 
             PT. Mahir Tekno Utama &nbsp;&nbsp;
         </a>
-        <a class="navbar-brand brand-logo-mini" href="{{ url('admin/dashboard') }}"><img src="images/mtu-mini.svg" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href=""><img src="images/mtu-mini.svg" alt="logo"/></a>
         <button class="navbar-toggler navbar-toggler align-self-center" style="" type="button" data-toggle="minimize">
 
         </button>
