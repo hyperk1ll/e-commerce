@@ -18,6 +18,7 @@
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <link rel="stylesheet" href="{{ asset('admin/css/style.css') }}">
+    <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet">
     <!-- endinject -->
     <link rel="shortcut icon" href="{{  asset('admin/images/mtu.transparent.png') }}" />
 
@@ -25,9 +26,11 @@
 
 </head>
 <body>
-    <div class="container-scroller">
+    <div class="" style="margin-top:70px">
         @include('layouts.inc.user.navbar')
-        @include('layouts.inc.user.secondarynavbar')
+
+        @include('layouts.inc.user.collections.category.index')
+
 
 
     </div>

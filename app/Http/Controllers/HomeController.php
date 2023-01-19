@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Category;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('layouts.user');
+    }
+
+    public function categories()
+    {
+        $categories = Category::where('status','0')->get();
+        return view('layouts.inc.user.collections.index', compact('categories'));
     }
 }
