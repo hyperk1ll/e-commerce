@@ -26,14 +26,13 @@
 
 </head>
 <body>
-    <div class="" style="margin-top:70px">
-        @include('layouts.inc.user.navbar')
+    <div id="app">
+        @include('layouts.inc.frontend.navbar')
 
-        @include('layouts.inc.user.collections.category.index')
-
-
+        @include('layouts.inc.frontend.secondarynavbar')
 
     </div>
+
 
     
 
@@ -50,6 +49,10 @@
     <script src="{{ asset('admin/js/data-table.js') }}"></script>
     <script src="{{ asset('admin/js/jquery.dataTables.js') }}"></script>
     <script src="{{ asset('admin/js/dataTables.bootstrap4.js') }}"></script>
+
+    <!-- Scripts -->
+    <script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     <!-- End custom js for this page-->
 
     <script src="js/jquery.cookie.js" type="text/javascript"></script>

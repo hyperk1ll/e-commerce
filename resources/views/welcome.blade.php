@@ -1,3 +1,3 @@
-@extends('layouts.user')
+@extends('layouts.app')
 
 @section ('content')

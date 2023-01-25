@@ -20,8 +20,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/collections', [App\Http\Controllers\HomeController::class, 'categories']);
+Route::get('/home', [App\Http\Controllers\FrontEndController::class, 'index'])->name('home');
+Route::get('/collections', [App\Http\Controllers\FrontEndController::class, 'categories']);
+Route::get('/collections/{category_slug}', [App\Http\Controllers\FrontEndController::class, 'products']);
 
 // Auth::routes();
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group (function () {

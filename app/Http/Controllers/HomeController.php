@@ -22,14 +22,5 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
-    {
-        return view('layouts.user');
-    }
-
-    public function categories()
-    {
-        $categories = Category::where('status','0')->get();
-        return view('layouts.inc.user.collections.index', compact('categories'));
-    }
+    
 }

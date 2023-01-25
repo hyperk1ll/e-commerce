@@ -1,3 +1,9 @@
+@extends('layouts.app')
+
+@section('title', 'All Categories')
+
+@section('content')
+
 <div class="py-3 py-md-5 bg-light">
     <div class="container">
         <div class="row">
@@ -27,3 +33,5 @@
     </div>
     
 </div>
+
+@endsection
