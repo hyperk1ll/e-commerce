@@ -40,13 +40,17 @@
                                 {{ $productItem->name }}
                             </a>
                             </h5>
+                            @if($productItem->selling_price != $productItem->original_price)
                             <div>
-                                <span class="selling-price">{{ $productItem->selling_price }}</span>
-                                <span class="original-price">{{ $productItem->original_price }}</span>
+                                <span class="selling-price"><?php echo "Rp " . number_format("$productItem->selling_price", 0, ",", "."); ?> </span>
+                                <span class="original-price"><?php echo "Rp " . number_format("$productItem->original_price", 0, ",", "."); ?></span>
                             </div>
+                            @else
+                            <div>
+                                <span class="selling-price"><?php echo "Rp " . number_format("$productItem->selling_price", 0, ",", "."); ?> </span>
+                            </div>
+                            @endif
                             <div class="mt-2">
-                                <a href="" class="btn btn1">Add To Cart</a>
-                                <a href="" class="btn btn1"> <i class="fa fa-heart"></i> </a>
                                 <a href="" class="btn btn1"> View </a>
                             </div>
                         </div>
@@ -61,3 +65,5 @@
         </div>
     </div>
 </div>
+
+
