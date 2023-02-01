@@ -18,6 +18,7 @@
     <!-- End plugin css for this page -->
     <!-- inject:css -->
     <link rel="stylesheet" href="{{ asset('admin/css/style.css') }}">
+    <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet">
     <!-- endinject -->
     <link rel="shortcut icon" href="{{  asset('admin/images/mtu.transparent.png') }}" />
 
@@ -25,18 +26,14 @@
 
 </head>
 <body>
-    <div class="container-scroller">
-        @include('layouts.inc.admin.navbar')
-        <div class="container-fluid page-body-wrapper">
-            @include('layouts.inc.admin.sidebar')
+    <div id="app">
+        @include('layouts.inc.frontend.navbar')
 
-            <div class="main-panel">
-                <div class="content-wrapper">
-                    @yield('content')
-                </div>
-            </div>
-        </div>
+        @include('layouts.inc.frontend.secondarynavbar')
+
     </div>
+
+
     
 
     <script src="{{ asset('admin/vendors/base/vendor.bundle.base.js') }}"></script>
@@ -52,6 +49,10 @@
     <script src="{{ asset('admin/js/data-table.js') }}"></script>
     <script src="{{ asset('admin/js/jquery.dataTables.js') }}"></script>
     <script src="{{ asset('admin/js/dataTables.bootstrap4.js') }}"></script>
+
+    <!-- Scripts -->
+    <script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     <!-- End custom js for this page-->
 
     <script src="js/jquery.cookie.js" type="text/javascript"></script>

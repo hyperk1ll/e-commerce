@@ -20,13 +20,18 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\FrontEndController::class, 'index'])->name('home');
+Route::get('/collections', [App\Http\Controllers\FrontEndController::class, 'categories']);
+Route::get('/collections/{category_slug}', [App\Http\Controllers\FrontEndController::class, 'products']);
+
+Route::get('/collections/{category_slug}/{product_slug}', [App\Http\Controllers\FrontEndController::class, 'productView']);
 
 // Auth::routes();
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group (function () {
 
     Route::get('dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
 
+    
     //Category Routes
     Route::controller(App\Http\Controllers\Admin\CategoryController::class)->group(function () {
         Route::get('/category', 'index');
@@ -47,7 +52,7 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group (function () {
     });
 
     Route::get('/brands', App\Http\Livewire\Admin\Brand\Index::class);
-
+    
 });
 
     
