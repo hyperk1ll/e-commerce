@@ -24,6 +24,8 @@ Route::get('/home', [App\Http\Controllers\FrontEndController::class, 'index'])->
 Route::get('/collections', [App\Http\Controllers\FrontEndController::class, 'categories']);
 Route::get('/collections/{category_slug}', [App\Http\Controllers\FrontEndController::class, 'products']);
 
+Route::get('/collections/{category_slug}/{product_slug}', [App\Http\Controllers\FrontEndController::class, 'productView']);
+
 // Auth::routes();
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group (function () {
 
