@@ -30,7 +30,8 @@
 <body>
     <div id="app">
         @include('layouts.inc.frontend.navbar')
-        @include('layouts.inc.frontend.secondarynavbar')
+        {{-- @include('layouts.inc.frontend.secondarynavbar') --}}
+        <div style="margin-top: 80px"></div>
         {{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">

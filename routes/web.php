@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Category;
 use App\Http\Controllers\Admin\DashboardController;
 /*
 |--------------------------------------------------------------------------
@@ -15,12 +16,49 @@ use App\Http\Controllers\Admin\DashboardController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $categories = Category::where('status','0')->get();
+    return view('frontend.collections.category.index', compact('categories'));
+});
+
+Route::get('/collections/{category_slug}', function ($category_slug) {
+    {
+        $category = Category::where('slug', $category_slug)->first();
+
+        if($category) {
+            $products = $category->products()->get();
+            return view('frontend.collections.products.index', compact('category'));
+        }
+
+        else{
+            return redirect()->back();
+        }
+
+    }
+});
+
+Route::get('/collections/{category_slug}/{product_slug}', function(string $category_slug, string $product_slug) {
+    {
+        $category = Category::where('slug', $category_slug)->first();
+
+        if($category) {
+            $product = $category->products()->where('slug', $product_slug)->where('status','0')->first();
+            if($product) {
+                return view('frontend.collections.products.view', compact('product','category'));
+            }
+            else{
+                return redirect()->back();
+            }
+        }
+
+        else{
+            return redirect()->back();
+        }
+    }
 });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\FrontEndController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\FrontEndController::class, 'categories'])->name('home');
 Route::get('/collections', [App\Http\Controllers\FrontEndController::class, 'categories']);
 Route::get('/collections/{category_slug}', [App\Http\Controllers\FrontEndController::class, 'products']);
 

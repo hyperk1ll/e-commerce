@@ -29,7 +29,7 @@
     <div id="app">
         @include('layouts.inc.frontend.navbar')
 
-        @include('layouts.inc.frontend.secondarynavbar')
+        {{-- @include('layouts.inc.frontend.secondarynavbar') --}}
 
     </div>
 
