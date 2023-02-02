@@ -1,8 +1,13 @@
 <style>
 .footer-basic {
-    padding:40px 0;
+    padding: 30px;
     background-color:lightgrey;
     color:#4b4c4d;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
   }
   
   .footer-basic ul {

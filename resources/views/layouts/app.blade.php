@@ -43,7 +43,7 @@
     @livewireScripts
 </body>
 
-<footer style="position: absolute; bottom:0px; width: 100%;">
+<footer>
     @include('layouts.inc.frontend.footer')
 </footer>
 
