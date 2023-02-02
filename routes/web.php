@@ -58,12 +58,14 @@ Route::get('/collections/{category_slug}/{product_slug}', function(string $categ
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\FrontEndController::class, 'categories'])->name('home');
-Route::get('/collections', [App\Http\Controllers\FrontEndController::class, 'categories']);
-Route::get('/collections/{category_slug}', [App\Http\Controllers\FrontEndController::class, 'products']);
+Route::controller(App\Http\Controllers\FrontEndController::class)->group(function () {
 
-Route::get('/collections/{category_slug}/{product_slug}', [App\Http\Controllers\FrontEndController::class, 'productView']);
-
+    Route::get('serach', 'searchProducts');
+    Route::get('/collections', 'categories');
+    Route::get('/collections/{category_slug}', 'products');
+    Route::get('/collections/{category_slug}/{product_slug}', 'productView');
+    Route::get('search', 'searchProducts');
+});
 // Auth::routes();
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group (function () {
 

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
-
+use App\Models\Product;
 
 class FrontEndController extends Controller
 {
@@ -50,6 +50,14 @@ class FrontEndController extends Controller
 
         else{
             return redirect()->back();
+        }
+    }
+    public function searchProducts(Request $request){
+        if($request->search){
+            $searchProducts = Product::where('name','LIKE','%'.$request->search.'%')->latest()->paginate(15);
+            return view('frontend.pages.search', compact('searchProducts'));
+        }else{
+            return redirect()->back()->with('message','Empty Search');
         }
     }
 }
