@@ -43,9 +43,8 @@
     @livewireScripts
 </body>
 
-<footer>
-    <div class="footer">
-        @include('layouts.inc.frontend.footer')
-    </div>
+<footer style="position: absolute; bottom:0px; width: 100%;">
+    @include('layouts.inc.frontend.footer')
 </footer>
+
 </html>
