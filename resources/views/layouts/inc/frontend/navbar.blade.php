@@ -11,7 +11,7 @@
       </div>  
     </div>
     <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-      <ul class="navbar-nav mr-lg-4 w-100">
+      <ul class="navbar-nav mr-lg-4 w-100 mt-50">
         <li class="nav-item nav-search d-none d-lg-block w-75">
         <form action="{{ url('search')}}" method="GET" role="search">
           <div class="input-group">
