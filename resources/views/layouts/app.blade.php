@@ -29,7 +29,10 @@
 </head>
 <body>
     <div class="container-scroller">
-        @include('layouts.inc.frontend.navbar')
+        <div style="margin-top: 80px">
+            @include('layouts.inc.frontend.navbar')
+        </div>
+        
 
         <main class="py-4">
             @yield('content')

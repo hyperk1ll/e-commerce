@@ -18,7 +18,7 @@
                     @if($productItem->productImages->count()>0)
                     <a href="{{ url('/collections/'.$productItem->category->slug.'/'.$productItem->slug) }}">
                         <div class="product-card-img">
-                                <img src="{{ asset($productItem->productImages[0]->image) }} " class="w-100 h-100 e  " alt="{{$productItem->name}}">
+                                <img src="{{ asset($productItem->productImages[0]->image) }}" class="w-100 h-100" alt="{{$productItem->name}}">
                         </div>
                     </a>
                     @endif

@@ -1,8 +1,8 @@
 <style>
 .footer-basic {
-    padding: 30px;
-    background-color:lightgrey;
-    color:#4b4c4d;
+    padding: 0px;
+    background-color:rgb(37, 179, 250);
+    color:rgb(37, 179, 250);
     position: fixed;
     left: 0;
     bottom: 0;
@@ -32,24 +32,23 @@
 
   
   .footer-basic .copyright {
-    margin-top:15px;
+    padding: 10px;
     text-align:center;
     font-size:13px;
-    color:#aaa;
+    color:#fff;
     margin-bottom:0;
-    position: relative;
   }
 </style>
 
 
 <div class="footer-basic">
-       <ul class="list-inline">
+       {{-- <ul class="list-inline">
             <li class="list-inline-item"><a href="#">Home</a></li>
             <li class="list-inline-item"><a href="#">Services</a></li>
             <li class="list-inline-item"><a href="#">About</a></li>
             <li <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-        </ul>
-        <p class="copyright">PT. Mahir Tekno Utama © 20</p>
+        </ul> --}}
+        <p class="copyright">PT. Mahir Tekno Utama © 2023 </p>
 
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
