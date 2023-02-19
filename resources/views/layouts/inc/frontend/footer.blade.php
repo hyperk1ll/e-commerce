@@ -1,4 +1,8 @@
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+* {
+  font-family: "Poppins", sans-serif;
+}
 .footer-basic {
     padding: 0px;
     background-color:rgb(37, 179, 250);
@@ -40,7 +44,6 @@
   }
 </style>
 
-
 <div class="footer-basic">
        {{-- <ul class="list-inline">
             <li class="list-inline-item"><a href="#">Home</a></li>
@@ -48,9 +51,11 @@
             <li class="list-inline-item"><a href="#">About</a></li>
             <li <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
         </ul> --}}
-        <p class="copyright">PT. Mahir Tekno Utama © 2023 </p>
+        <p class="copyright">PT. Mahir Tekno Utama © <script>document.write(/\d{4}/.exec(Date())[0])</script> </p>
 
 </div>
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 

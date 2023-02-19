@@ -1,77 +1,105 @@
-@extends('layouts.app')
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+    <title> @yield('title') </title>
 
-                        <div class="row mb-3">
-                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
+    <meta name="description" content="@yield('meta_description')">
+    <meta name="keywords" content="@yield('meta_description')">
+    <meta name="author" content="MTU Catalog">
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="{{ asset('admin/vendors/mdi/css/materialdesignicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/vendors/base/vendor.bundle.base.css') }}">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <link rel="stylesheet" href="{{ asset('admin/vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="{{ asset('admin/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
+    <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="{{  asset('admin/images/mtu.transparent.png') }}" />
+    @livewireStyles
+</head>
+<body>
 
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+    <main class="py-4">
+        <div class="container-scroller">
+            <div class="center">
+                <h1>Register</h1>
+                <form method="POST" action="{{ route('register') }}">
+                    @csrf
+                    <div class="txt_field">
+                        <input id="name" type="text" class="@error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                        <span></span>
+                        <label for="name">{{ __('Name') }}</label>
 
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+                        @error('name')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
+                    </div>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                    <div class="txt_field">
+                        <input id="email" type="email" class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                        <span></span>
+                        <label for="email">{{ __('Email Address') }}</label>
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+                        @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
 
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+                    <div class="txt_field">
+                        <input id="password" type="password" class="@error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                        <span></span>
+                        <label for="password">{{ __('Password') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                        @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                    </div>
 
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+                    <div class="txt_field">
+                        <input id="password-confirm" type="password" name="password_confirmation" required autocomplete="new-password">
 
-                        <div class="row mb-3">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
+                        <span></span>
+                        <label for="password-confirm">{{ __('Confirm Password') }}</label>
+                    </div>
 
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                    <button type="submit">
+                        {{ __('Register') }}
+                    </button>
+                    
+                    <div class="signup_link">
+                        Already have an account? <a href="{{ route('login') }}">Login</a>
+                    </div>
+                </form>
             </div>
         </div>
-    </div>
-</div>
-@endsection
+    </main>
+
+ <!-- Scripts -->
+ <script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
+ <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+
+ @livewireScripts
+</body>
+
+<footer>
+ @include('layouts.inc.frontend.footer')
+</footer>
+
+</html>
