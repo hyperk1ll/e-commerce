@@ -29,14 +29,16 @@
 </head>
 <body>
     <div class="container-scroller">
-        <div style="margin-top: 80px">
-            @include('layouts.inc.frontend.navbar')
-        </div>
-        
+        @include('layouts.inc.frontend.navbar')
+        <div class="container-fluid page-body-wrapper">
+            @include('layouts.inc.frontend.sidebar')
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    @yield('content')
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Scripts -->
