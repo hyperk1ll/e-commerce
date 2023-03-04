@@ -8,7 +8,7 @@
     background-color:rgb(37, 179, 250);
     color:rgb(37, 179, 250);
     position: fixed;
-    left: 0;
+    left: 125px;
     bottom: 0;
     width: 100%;
     text-align: center;

@@ -30,7 +30,7 @@
       
         <!-- Authentication Links -->
         @guest
-              <a class="nav-link" href="{{ route('login') }}"><div class="btn btn-primary">{{ __('Login') }}</div></a>
+              <a class="nav-link" href="{{ route('login') }}"><div class="btn btn-primary">{{ __('Admin') }}</div></a>
         @else
         <div class="dropdown">
           <a id="navbarDropdown" class="nav-link nav-profile dropdown-toggle" href="#" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">

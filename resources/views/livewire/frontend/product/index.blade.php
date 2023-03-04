@@ -58,17 +58,15 @@
                             </h5>
                             @if($productItem->selling_price != $productItem->original_price)
                             <div>
-                                <span class="selling-price"><?php echo "Rp " . number_format("$productItem->selling_price", 0, ",", "."); ?> </span>
-                                <span class="original-price"><?php echo "Rp " . number_format("$productItem->original_price", 0, ",", "."); ?></span>
+                                <div class="selling-price"><?php echo "Rp " . number_format("$productItem->selling_price", 0, ",", "."); ?> </div>
+                                <div class="original-price"><?php echo "Rp " . number_format("$productItem->original_price", 0, ",", "."); ?></div>
                             </div>
                             @else
                             <div>
                                 <span class="selling-price"><?php echo "Rp " . number_format("$productItem->selling_price", 0, ",", "."); ?> </span>
                             </div>
                             @endif
-                            <div class="mt-2">
-                                <a href="" class="btn btn1"> View </a>
-                            </div>
+
                         </div>
                     </div>
                 </div>
