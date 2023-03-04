@@ -98,8 +98,8 @@
  @livewireScripts
 </body>
 
-<footer>
+{{-- <footer>
  @include('layouts.inc.frontend.footer')
-</footer>
+</footer> --}}
 
 </html>

@@ -83,6 +83,9 @@
                 <div class="signup_link">
                   Not a member? <a href="{{ route('register') }}">Signup</a>
                 </div>
+                <div class="signup_link">
+                  Not an admin? <a href="{{ url('collections/') }}">Go back!</a>
+                </div>
                 
               </form>
             </div>
@@ -99,8 +102,8 @@
  @livewireScripts
 </body>
 
-<footer>
+{{-- <footer>
  @include('layouts.inc.frontend.footer')
-</footer>
+</footer> --}}
 
 </html>
