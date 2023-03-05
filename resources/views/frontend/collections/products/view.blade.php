@@ -12,7 +12,9 @@
 {{ $product->meta_description }}
 @endsection
 
+<div class="content-wrapper">
 @section('content')
+</div>
 
 <div>
     <livewire:frontend.product.view :category="$category" :product="$product"/>

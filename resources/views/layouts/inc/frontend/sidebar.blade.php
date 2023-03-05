@@ -1,7 +1,7 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
   <ul class="nav">
     <li class="nav-item">
-      <a class="nav-link" href="{{ url('/collections') }}">
+      <a class="nav-link" href="{{ url('/') }}">
         <i class="mdi mdi-home menu-icon"></i>
         <span class="menu-title">Home</span>
       </a>
