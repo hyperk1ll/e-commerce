@@ -35,10 +35,9 @@
             
             
             <div class="main-panel">
-                <div class="content-wrapper">
-                    @include('frontend.index')
+                {{-- <div class="content-wrapper"> --}}
                     @yield('content')
-                </div>
+                {{-- </div> --}}
             </div>
         </div>
     </div>
