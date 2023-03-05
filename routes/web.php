@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Category;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Models\Slider;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +18,8 @@ use App\Http\Controllers\Admin\DashboardController;
 
 Route::get('/', function () {
     $categories = Category::where('status','0')->get();
-    return view('frontend.collections.category.index', compact('categories'));
+    $sliders = Slider::where('status','0')->get();
+    return view('frontend.collections.category.index', compact('categories', 'sliders'));
 });
 
 Route::get('/collections/{category_slug}', function ($category_slug) {

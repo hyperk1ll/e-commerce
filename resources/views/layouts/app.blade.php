@@ -32,9 +32,11 @@
         @include('layouts.inc.frontend.navbar')
         <div class="container-fluid page-body-wrapper">
             @include('layouts.inc.frontend.sidebar')
-                
+            
+            
             <div class="main-panel">
                 <div class="content-wrapper">
+                    @include('frontend.index')
                     @yield('content')
                 </div>
             </div>
