@@ -37,6 +37,7 @@
             <div class="main-panel">
                 {{-- <div class="content-wrapper"> --}}
                     @yield('content')
+                    @include('layouts.inc.frontend.footer')
                 {{-- </div> --}}
             </div>
         </div>
@@ -48,9 +49,5 @@
 
     @livewireScripts
 </body>
-
-<footer>
-    @include('layouts.inc.frontend.footer')
-</footer>
 
 </html>
