@@ -4,44 +4,36 @@
 
 @section('content')
 
-{{-- Carousel --}}
 @include('layouts.inc.frontend.slider')
-    {{-- End of Carousel --}}
 
-{{-- <div class="py-3 py-md-5 bg-light"> --}}
-<div class="content-wrapper">
-<div class="container">
-<div class="row">
-        <div class="col-md-12">
-            <h4>Categories</h4>
-        </div>
-
+@include('layouts.inc.frontend.client')
     
-
-    @forelse ($categories as $categoryItem)
-    <div class="col-6 col-md-3">
-        <div class="category-card">
-            <a href="{{ url('/collections/'.$categoryItem->slug) }}">
-                <div class="category-card-img">
-                    <img src="{{ asset("$categoryItem->image") }}" class="w-100" alt="Laptop">
-                </div>
-                <div class="category-card-body">
-                    <h5>{{ $categoryItem->name }}</h5>
-                </div>
-            </a>
-        </div>
+<section id="services" class="services section-bg">
+  <div class="container">
+    <div class="section-title "data-aos="fade-up">
+      <h2>Categories</h2>
+      <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
     </div>
-    @empty
-        <div class="col-md-12">
-            <h5>No Categories Available
+
+    <div class="row">
+      @foreach ($categories as $categoryItem)
+        <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos=zoom-in data-aos-delay="100">
+          <div class="icon-box">
+            <div class="icon">
+              <img src="{{ asset($categoryItem->image) }}" alt="{{ $categoryItem->name }}" class="w-100">
+            </div>
+            <h4><a href="{{ url('/collections/'.$categoryItem->slug) }}">{{ $categoryItem->name }}</a></h4>
+            <p>{{ $categoryItem->description }}</p>
+          </div>
         </div>
-    @endforelse
+      @endforeach
+    </div>
 
-    
-</div>
-</div>
-</div>
+  </div>
+</section>
 
-{{-- </div> --}}
+@include('layouts.inc.frontend.contact')
 
 @endsection
+
+
