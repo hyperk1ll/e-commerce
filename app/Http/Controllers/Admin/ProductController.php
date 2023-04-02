@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
 use App\Http\Requests\ProductFormRequest;
+use Intervention\Image\Facades\Image;
 
 class ProductController extends Controller
 {
@@ -58,6 +59,15 @@ class ProductController extends Controller
                 $filename = time().$i++. '.' . $extension;
                 $imageFile->move($uploadPath, $filename);
                 $finalImagePathName = $uploadPath.$filename;
+
+                $image = Image::make($finalImagePathName);
+                $size = min($image->width(), $image->height());
+                $image->resizeCanvas($size, $size);
+                $image->crop($size, $size);
+                $image->resize(400, 400, function ($constraint) {
+                    $constraint->aspectRatio();
+                });
+                $image->save($finalImagePathName);
 
                 $product->productImages()->create([
                     'product_id' => $product->id,
@@ -110,12 +120,21 @@ class ProductController extends Controller
                     $imageFile->move($uploadPath, $filename);
                     $finalImagePathName = $uploadPath.$filename;
     
-                    $product->productImages()->create([
-                        'product_id' => $product->id,
-                        'image' => $finalImagePathName,
-                    ]);
-                }
+                $image = Image::make($finalImagePathName);
+                $size = min($image->width(), $image->height());
+                $image->resizeCanvas($size, $size);
+                $image->crop($size, $size);
+                $image->resize(400, 400, function ($constraint) {
+                    $constraint->aspectRatio();
+                });
+                $image->save($finalImagePathName);
+
+                $product->productImages()->create([
+                    'product_id' => $product->id,
+                    'image' => $finalImagePathName,
+                ]);
             }
+        }
     
             return redirect('/admin/products')->with('message', 'Product Updated successfully!');
         }

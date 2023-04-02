@@ -110,7 +110,7 @@ h6 {
 #header {
   transition: all 0.5s;
   z-index: 997;
-  padding: 15px 0;
+  padding: 5px 0;
 }
 
 #header.header-scrolled,
@@ -122,7 +122,7 @@ h6 {
   font-size: 30px;
   margin: 0;
   padding: 0;
-  line-height: 1;
+  line-height: 0;
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -130,6 +130,7 @@ h6 {
 
 #header .logo a {
   color: #fff;
+  text-decoration: none;
 }
 
 #header .logo img {
@@ -143,7 +144,7 @@ h6 {
 * Desktop Navigation 
 */
 .navbar {
-  padding: 0;
+  padding: 10;
 }
 
 .navbar ul {
@@ -169,6 +170,7 @@ h6 {
   color: #fff;
   white-space: nowrap;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .navbar a i,
@@ -220,6 +222,7 @@ h6 {
 
 .navbar .dropdown ul li {
   min-width: 200px;
+  text-decoration: none;
 }
 
 .navbar .dropdown ul a {
@@ -228,6 +231,7 @@ h6 {
   text-transform: none;
   font-weight: 500;
   color: #0c3c53;
+  text-decoration: none;
 }
 
 .navbar .dropdown ul a i {
@@ -437,17 +441,21 @@ h6 {
 
 .navbar-mobile .dropdown ul a i {
   font-size: 12px;
+  text-decoration: none;
 }
 
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
+  text-decoration: none;
   color: #47b2e4;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
+  text-decoration: none;
   display: block;
 }
+
 
 /*--------------------------------------------------------------
 # Hero Section

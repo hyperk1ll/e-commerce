@@ -12,18 +12,22 @@
 {{ $category->meta_description }}
 @endsection
 
+@include('layouts.inc.frontend.navbar2')
 @section('content')
 
-{{-- <div class="py-3 py-md-5 bg-light"> --}}
-<div class="content-wrapper">
+<section id="breadcrumbs" class="breadcrumbs">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h4 class="mb-4">Our Products</h4>
-            </div>
 
-            <livewire:frontend.product.index :category="$category"/>
+    <ol>
+    <li><a href="{{ url('/') }}" style="text-decoration: none; color:black;">Home</a></li>
+    <li><a href="{{ url('/collections/'.$category->slug) }}" style="text-decoration: none; color:black;">{{ $category->name }}</a></li>
+    </ol>
+    <h2>Our Products</h2>
 
+    </div>
+</section><!-- End Breadcrumbs -->
+
+            @livewire('frontend.product.index', ['category' => $category])
 
         </div>
     </div>

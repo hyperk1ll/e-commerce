@@ -22,6 +22,10 @@
  <!-- ======= Clients Section ======= -->
  <section id="clients" class="clients section-bg">
     <div class="container">
+      {{-- <div class="section-title "data-aos="fade-up">
+        <h2>Our Beloved Clients</h2>
+        <p>Berikut adalah client-client kami, dan masih banyak lagi selain mereka! </p>
+      </div> --}}
       <div class="row" data-aos=zoom-in>
 
         <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">

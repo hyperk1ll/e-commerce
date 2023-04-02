@@ -1,5 +1,8 @@
-<div>
-    <div class="row">
+
+
+  <section class="inner-page">
+    <div class="container">
+      <div class="row">
         <div class="col-md-3">
             @if($category->brands)
             <div class="card">
@@ -15,7 +18,7 @@
                 </div>
             </div>
             @endif
-
+    
             <div class="card mt-3">
                 <div class="card-header">
                     <h4>Price</h4>
@@ -29,55 +32,50 @@
                     </label>
                 </div>
             </div>
-
-
+    
+    
         </div>
         <div class="col-md-9">
-
             <div class="row">
                 @forelse ($products as $productItem)
-                <div class="col-md-4">
-                    <div class="product-card">
-                        <div class="product-card-img">
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body p-0">
                             @if ($productItem->quantity > 0)
-                                <label class="stock bg-success">In Stock</label>
+                            <span class="stock bg-success text-white px-2 py-1">In Stock</span>
                             @else
-                                <label class="stock bg-danger">Out of Stock</label>
+                            <span class="stock bg-danger text-white px-2 py-1">Out of Stock</span>
                             @endif
-
-                            @if ($productItem->productImages->count() > 0)
-                            <img src="{{ asset($productItem->productImages[0]->image) }}" alt="{{ $productItem->name }}">
-                            @endif
-                        </div>
-                        <div class="product-card-body">
-                            <p class="product-brand">{{ $productItem->brand }}</p>
-                            <h5 class="product-name">
+    
                             <a href="{{ url('/collections/'.$productItem->category->slug.'/'.$productItem->slug) }}">
-                                {{ $productItem->name }}
+                                @if ($productItem->productImages->count() > 0)
+                                <img src="{{ asset($productItem->productImages[0]->image) }}" alt="{{ $productItem->name }}" class="card-img-top">
+                                @endif
                             </a>
-                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">{{ $productItem->brand }}</p>
+                            <h5 class="card-title">{{ $productItem->name }}</h5>
                             @if($productItem->selling_price != $productItem->original_price)
-                            <div>
-                                <div class="selling-price"><?php echo "Rp " . number_format("$productItem->selling_price", 0, ",", "."); ?> </div>
-                                <div class="original-price"><?php echo "Rp " . number_format("$productItem->original_price", 0, ",", "."); ?></div>
-                            </div>
+                            <p class="card-text">
+                                <span class="selling-price font-weight-bold"><?php echo "Rp " . number_format("$productItem->selling_price", 0, ",", "."); ?> </span>
+                                <span class="original-price text-muted"><?php echo "Rp " . number_format("$productItem->original_price", 0, ",", "."); ?></span>
+                            </p>
                             @else
-                            <div>
-                                <span class="selling-price"><?php echo "Rp " . number_format("$productItem->selling_price", 0, ",", "."); ?> </span>
-                            </div>
+                            <p class="card-text">
+                                <span class="selling-price font-weight-bold"><?php echo "Rp " . number_format("$productItem->selling_price", 0, ",", "."); ?> </span>
+                            </p>
                             @endif
-
                         </div>
                     </div>
                 </div>
                 @empty
-                    <div class="col-md-12">
-                        <h4>No Products Available for {{ $category->name }}</h4>
-                    </div>
+                <div class="col-md-12">
+                    <h4>No Products Available for {{ $category->name }}</h4>
+                </div>
                 @endforelse
-            </div>
+    </div>
+  </section>
         </div>
     </div>
 </div>
-
-
