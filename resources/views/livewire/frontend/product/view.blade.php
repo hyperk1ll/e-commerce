@@ -17,9 +17,6 @@
                         {{ $product->name }}
                     </h4>
                     <hr>
-                    <p class="product-path">
-                        Home / {{ $product->category->name }} / {{ $product->name }}
-                    </p>
                     @if($product->selling_price != $product->original_price)
                         <div>
                             <span class="selling-price"><?php echo "Rp " . number_format("$product->selling_price", 0, ",", "."); ?> </span>
