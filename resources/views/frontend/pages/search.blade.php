@@ -2,6 +2,12 @@
 
 @section('title', 'Search Products')
 
+@include('layouts.inc.frontend.navbar2')
+
+<br>
+<br>
+<br>
+
 @section('content')
 
 {{-- <div class="py-3 py-md-5 bg-light"> --}}

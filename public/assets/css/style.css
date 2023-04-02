@@ -1745,11 +1745,14 @@ section {
   outline: none;
 }
 
-#search .search-searchbar form input[type=serch] {
+#search .search-searchbar form input[type=search] {
   border: 0;
   padding: 4px 8px;
   width: 100%;
   outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   /* background: transparent; */
 }
 

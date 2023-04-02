@@ -1,25 +1,4 @@
-{{-- 
 
-      </div>  
-    </div>
-    <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-      <ul class="navbar-nav mr-lg-4 w-100 mt-50">
-        <li class="nav-item nav-search d-none d-lg-block w-75">
-        <form action="{{ url('search')}}" method="GET" role="search">
-          <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="search">
-                  <i class="mdi mdi-magnify"></i>
-                </span>
-              </div>
-              <input type="serch" name="search" class="form-control" placeholder="Search by product, category, or brand" aria-label="search" aria-describedby="search">
-            </div>
-          </form>  
-        </li>
-      </ul>
-
-    
-  </style> --}}
 
   <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center">

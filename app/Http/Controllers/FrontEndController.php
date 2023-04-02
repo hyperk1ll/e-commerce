@@ -54,9 +54,17 @@ class FrontEndController extends Controller
     }
     public function searchProducts(Request $request){
         if($request->search){
-            $searchProducts = Product::where('name','LIKE','%'.$request->search.'%')->latest()->paginate(15);
+            $searchProducts = Product::where('name', 'LIKE', '%'.$request->search.'%')
+                ->orWhere('brand', 'LIKE', '%'.$request->search.'%')
+                ->orWhere(function ($query) use ($request) {
+                    $query->whereHas('category', function ($query) use ($request) {
+                        $query->where('name', 'LIKE', '%'.$request->search.'%');
+                    });
+                })
+                ->orderBy('name')
+                ->paginate(15);
             return view('frontend.pages.search', compact('searchProducts'));
-        }else{
+        } else {
             return redirect()->back()->with('message','Empty Search');
         }
     }
