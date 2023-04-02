@@ -3,6 +3,9 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
+use App\Models\Category;
+use App\Models\Brand;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +26,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $categories = Category::where('status','0')->get();
+        View::share('categories', $categories);
+    
+        $brands = Brand::where('status','0')->get();
+        View::share('brands', $brands);
     }
 }

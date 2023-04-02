@@ -30,18 +30,16 @@
         <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         <li class="dropdown"><a href="#services"><span>Categories</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
-            <li><a href="{{ url('collections/switch') }}">Switch</a></li>
-            <li><a href="{{ url('collections/router') }}">Router</a></li>
-            <li><a href="{{ url('collections/peripheral') }}">Peripheral</a></li>
-            <li><a href="{{ url('collections/server') }}">Server</a></li>
+            @foreach ($categories as $category)
+              <li><a href="{{ url('collections/' . $category->name) }}">{{ $category->name }}</a></li>
+            @endforeach
           </ul>
         </li>
         <li class="dropdown1"><a href="#"><span>Brands</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
-            <li><a href="#">Drop Down 1</a></li>
-            <li><a href="#">Drop Down 2</a></li>
-            <li><a href="#">Drop Down 3</a></li>
-            <li><a href="#">Drop Down 4</a></li>
+            @foreach ($brands as $brand)
+              <li><a href="{{ url('collections/' . $brand->name) }}">{{ $brand->name }}</a></li>
+            @endforeach
           </ul>
         </li>
         @guest

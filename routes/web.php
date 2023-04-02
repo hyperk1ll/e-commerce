@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Category;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Models\Slider;
+use App\Models\Brand;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,33 +20,30 @@ use App\Models\Slider;
 Route::get('/', function () {
     $categories = Category::where('status','0')->get();
     $sliders = Slider::where('status','0')->get();
+    $brands = Brand::where('status','0')->get();
     return view('frontend.collections.category.index', compact('categories', 'sliders'));
 });
 
+
 Route::get('/collections/{category_slug}', function ($category_slug) {
-    {
-        $category = Category::where('slug', $category_slug)->first();
-
-        if($category) {
-            $products = $category->products()->get();
-            return view('frontend.collections.products.index', compact('category'));
-        }
-
-        else{
-            return redirect()->back();
-        }
-
+    $category = \App\Models\Category::where('slug', $category_slug)->first();
+    if ($category) {
+        $categories =  Category::where('status', '0')->get();
+        return view('frontend.collections.products.index', compact('category', 'categories'));
+    } else {
+        return redirect()->back();
     }
 });
 
 Route::get('/collections/{category_slug}/{product_slug}', function(string $category_slug, string $product_slug) {
     {
         $category = Category::where('slug', $category_slug)->first();
+        $categories = Category::where('status','0')->get();
 
         if($category) {
             $product = $category->products()->where('slug', $product_slug)->where('status','0')->first();
             if($product) {
-                return view('frontend.collections.products.view', compact('product','category'));
+                return view('frontend.collections.products.view', compact('product','category','categories'));
             }
             else{
                 return redirect()->back();
