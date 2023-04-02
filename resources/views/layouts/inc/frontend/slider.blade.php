@@ -18,6 +18,7 @@
   <!-- Template Main CSS File -->
   <link href="{{asset('/assets/css/style.css')}}" rel="stylesheet">
   
+  
  <!-- ======= Hero Section ======= -->
 {{-- Carousel --}}
   
@@ -30,9 +31,23 @@
       <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200"> 
         <h1>Better Solutions For Your Business</h1>
         <h2>Delivering the Best-of-Breed IT Infrastructure Technology that Fits Your Business and Budget, with a Commitment to Timely and Efficient Service</h2>
+        <br>
+        <br>
         <div class="d-flex justify-content-center justify-content-lg-start">
-          <a href="#about" class="btn-get-started scrollto">Get Started</a>
-          <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+        <search id="search">
+        <div class="search-searchbar justify-content-start">
+          <div class="container">
+          <div class="row">
+            <div class="col-lg-50">
+            <h4>Ayo cari apa yang kamu butuhkan!</h4>
+            <form action="{{ url('search')}}" method="GET">
+              <input type="serch" name="search" class="form-control" placeholder="Search here" aria-label="search" aria-describedby="search"><input type="submit" value="Search">
+            </form>
+            </div>
+          </div>
+          </div>
+        </div>
+        </search>
         </div>
       </div>
      
