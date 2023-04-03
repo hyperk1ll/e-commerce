@@ -28,7 +28,7 @@
                 <li>
                     <form action="{{ url('/search') }}" method="GET">
                         <input type="hidden" name="category" value="{{ $category->slug }}">
-                        <button type="submit" class="btn btn-link" name="search" value="{{ $brand->name }}">{{ $brand->name }}</button>
+                        <button style="text-decoration: none; color:#0c3c53 "type="submit" class="btn" name="search" value="{{ $brand->name }}">{{ $brand->name }}</button>
                     </form>
                 </li>
                 @endforeach

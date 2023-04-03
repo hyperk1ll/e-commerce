@@ -39,7 +39,12 @@
           <a href="#"><span>Brands</span> <i class="bi bi-chevron-down"></i></a>
           <ul>
               @foreach ($brands as $brand)
-              <li><a href="{{ url('/search?brand='.$brand->name.'&category='.$category->slug) }}">{{ $brand->name }}</a></li>
+              <li>
+                  <form action="{{ url('/search') }}" method="GET">
+                      <input type="hidden" name="category" value="{{ $category->slug }}">
+                      <button style="text-decoration: none; color:#0c3c53;" type="submit" class="btn" name="search" value="{{ $brand->name }}">{{ $brand->name }}</button>
+                  </form>
+              </li>
               @endforeach
           </ul>
       </li>
