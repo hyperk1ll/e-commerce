@@ -56,6 +56,16 @@ Route::get('/collections/{category_slug}/{product_slug}', function(string $categ
     }
 });
 
+Route::get('/collections/{brand_slug}', function ($brand_slug) {
+    $brand = \App\Models\Brand::where('slug', $brand_slug)->first();
+    if ($brand) {
+        $brands =  Brand::where('status', '0')->get();
+        return view('frontend.collections.brand.index', compact('brand', 'brands'));
+    } else {
+        return redirect()->back();
+    }
+});
+
 Auth::routes();
 
 Route::controller(App\Http\Controllers\FrontEndController::class)->group(function () {

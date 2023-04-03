@@ -21,13 +21,19 @@
               @endif
             </ul>
           </li>
-          <li class="dropdown1"><a href="#"><span>Brands</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown1">
+            <a href="#"><span>Brands</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              @foreach ($brands as $brand)
-              <li><a href="{{ url('collections/' . $brand->name) }}">{{ $brand->name }}</a></li>
-              @endforeach
+                @foreach ($brands as $brand)
+                <li>
+                    <form action="{{ url('/search') }}" method="GET">
+                        <input type="hidden" name="category" value="{{ $category->slug }}">
+                        <button type="submit" class="btn btn-link" name="search" value="{{ $brand->name }}">{{ $brand->name }}</button>
+                    </form>
+                </li>
+                @endforeach
             </ul>
-          </li>
+        </li>
           @guest
           <li><a class="getstarted scrollto" href="{{ route('login') }}">Admin</a></li>
           @else
