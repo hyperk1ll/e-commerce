@@ -39,19 +39,19 @@
           <span class="menu-title">Brands</span>
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="pages/tables/basic-table.html">
-          <i class="mdi mdi-grid-large menu-icon"></i>
-          <span class="menu-title">Users</span>
-        </a>
-      </li>
-      <li class="nav-item">
+      {{-- <li class="nav-item">
         <a class="nav-link" href="{{ url('admin/sliders') }}">
           <i class="mdi mdi-grid-large menu-icon"></i>
           <span class="menu-title">Slider</span>
         </a>
-      </li>
+      </li> --}}
       <li class="nav-item">
+        <a class="nav-link" href="{{ url('admin/admin') }}">
+          <i class="mdi mdi-account menu-icon"></i>
+          <span class="menu-title">Administrator</span>
+        </a>
+      </li>
+      {{-- <li class="nav-item">
         <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
           <i class="mdi mdi-account menu-icon"></i>
           <span class="menu-title">Site Settings</span>
@@ -66,6 +66,6 @@
             <li class="nav-item"> <a class="nav-link" href="pages/samples/lock-screen.html"> Lockscreen </a></li>
           </ul>
         </div>
-      </li>
+      </li> --}}
     </ul>
   </nav>

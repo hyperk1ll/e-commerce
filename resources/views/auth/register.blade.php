@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="{{ asset('admin/vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
-    <link rel="stylesheet" href="{{ asset('admin/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/login.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
     <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet">
     <!-- endinject -->
@@ -79,7 +79,7 @@
                         <label for="password-confirm">{{ __('Confirm Password') }}</label>
                     </div>
 
-                    <button type="submit">
+                    <button type="submit" class="submit">
                         {{ __('Register') }}
                     </button>
                     

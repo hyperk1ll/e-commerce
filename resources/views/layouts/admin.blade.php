@@ -25,7 +25,9 @@
 
 </head>
 <body>
+    
     <div class="container-scroller">
+       
         @include('layouts.inc.admin.navbar')
         <div class="container-fluid page-body-wrapper">
             @include('layouts.inc.admin.sidebar')
@@ -35,8 +37,12 @@
                     @yield('content')
                 </div>
             </div>
+            
         </div>
+        <footer>@include('layouts.inc.admin.footer')</footer>
+        
     </div>
+    
     
 
     <script src="{{ asset('admin/vendors/base/vendor.bundle.base.js') }}"></script>

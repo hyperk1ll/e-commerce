@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'All Categories')
+@section('title', 'MTU Catalog')
 
 @section('content')
 @include('layouts.inc.frontend.navbar')

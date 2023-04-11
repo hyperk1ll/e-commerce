@@ -89,6 +89,13 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group (function () {
         Route::put('sliders/{slider}', 'update');
         Route::get('sliders/{slider}/delete', 'destroy');
     });
+
+    Route::controller(App\Http\Controllers\Admin\AdminController::class)->group(function () {
+        Route::get('/admin', 'index');
+        Route::get('/admin/create', 'create');
+
+    });
+
     
     //Category Routes
     Route::controller(App\Http\Controllers\Admin\CategoryController::class)->group(function () {

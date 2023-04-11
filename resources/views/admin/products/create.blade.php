@@ -2,12 +2,26 @@
 
 @section('content')
 
+<style>
+    select.form-control.border-foo:not([size]):not([multiple]) {
+      height: auto;
+    }
+    .border-foo {
+      border-style: solid;
+      border-width: 1px;
+      border-color: rgb(207, 207, 207);
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+</style>
+
 <div class="row">
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
                 <h4>Add Product
-                    <a href="{{ url('admin/products/') }}" class="btn btn-danger float-end">Back</a>
+                    <a href="{{ url('admin/products/') }}" class="btn btn-primary float-end">Back</a>
                 </h4>
             </div>
             <div class="card-body">
@@ -48,7 +62,7 @@
                         <div class="tab-pane fade border p-3 show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                             <div class="mb-3">
                                 <label>Category</label>
-                                <select name="category_id" class="form-control">
+                                <select name="category_id" class="form-control border-foo">
                                     @foreach ($categories as $category)
                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                                     @endforeach
@@ -56,15 +70,15 @@
                             </div>
                             <div class="mb-3">
                                 <label>Product Name</label>
-                                <input type="text" name="name" class="form-control">
+                                <input type="text" name="name" class="form-control border-foo">
                             </div>
                             <div class="mb-3">
                                 <label>Product Slug</label>
-                                <input type="text" name="slug" class="form-control">
+                                <input type="text" name="slug" class="form-control border-foo">
                             </div>
                             <div class="mb-3">
                                 <label>Select Brand</label>
-                                <select name="brand" class="form-control">
+                                <select name="brand" class="form-control border-foo">
                                     @foreach ($brands as $brand)
                                         <option value="{{ $brand->id }}">{{ $brand->name }}</option>
                                     @endforeach
@@ -72,25 +86,25 @@
                             </div>
                             <div class="mb-3">
                                 <label>Small Description (500 Words)</label>
-                                <textarea name="small_description" class="form-control" rows="4"></textarea>
+                                <textarea name="small_description" class="form-control border-foo" rows="4"></textarea>
                             </div>
                             <div class="mb-3">
                                 <label>Description</label>
-                                <textarea name="description" class="form-control" rows="4"></textarea>
+                                <textarea name="description" class="form-control border-foo" rows="4"></textarea>
                             </div>
                         </div>
                         <div class="tab-pane fade border p-3" id="seotag-tab-pane" role="tabpanel" aria-labelledby="seotag-tab" tabindex="0">
                             <div class="mb-3">
                                 <label>Meta Title</label>
-                                <input type="text" name="meta_title" class="form-control">
+                                <input type="text" name="meta_title" class="form-control border-foo">
                             </div>
                             <div class="mb-3">
                                 <label>Meta Description</label>
-                                <textarea name="meta_description" class="form-control" rows="4"></textarea>
+                                <textarea name="meta_description" class="form-control border-foo" rows="4"></textarea>
                             </div>
                             <div class="mb-3">
                                 <label>Meta Keyword</label>
-                                <textarea name="meta_keyword" class="form-control" rows="4"></textarea>
+                                <textarea name="meta_keyword" class="form-control border-foo" rows="4"></textarea>
                             </div>
                         </div>
                         <div class="tab-pane fade border p-3" id="details-tab-pane" role="tabpanel" aria-labelledby="details-tab" tabindex="0">
@@ -98,19 +112,19 @@
                                 <div class="col-md-4">
                                     <div class="mb-3">
                                         <label>Original Price</label>
-                                        <input type="text" name="original_price" class="form-control">
+                                        <input type="text" name="original_price" class="form-control border-foo">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
                                         <label>Selling Price</label>
-                                        <input type="text" name="selling_price" class="form-control">
+                                        <input type="text" name="selling_price" class="form-control border-foo">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
                                         <label>Quantity</label>
-                                        <input type="number" name="quantity" class="form-control">
+                                        <input type="number" name="quantity" class="form-control border-foo">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -131,7 +145,7 @@
                         <div class="tab-pane fade border p-3" id="image-tab-pane" role="tabpanel" aria-labelledby="image-tab" tabindex="0">
                             <div class="mb-3">
                                 <label> Upload Product Image</label>
-                                <input type="file" name="image[]" multiple class="form-control">
+                                <input type="file" name="image[]" multiple class="form-control border-foo">
                             </div>    
                         </div>
                     </div>

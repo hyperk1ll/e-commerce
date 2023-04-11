@@ -2,12 +2,26 @@
 
 @section('content')
 
+<style>
+    select.form-control.border-foo:not([size]):not([multiple]) {
+      height: auto;
+    }
+    .border-foo {
+      border-style: solid;
+      border-width: 1px;
+      border-color: rgb(207, 207, 207);
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+</style>
+
 <div class="row">
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
                 <h4>Edit Category
-                    <a href="{{url('admin/category')}}" class="btn btn-primary btn-sm text-white float-end">BACK</a>
+                    <a href="{{url('admin/category')}}" class="btn btn-primary float-end">Back</a>
                 </h4>
             </div>
             <div class="card-body">
@@ -18,25 +32,25 @@
                     
                         <div class="col-md-6 mb-3">
                             <label>Name</label>
-                            <input type="text" name="name" value="{{$category->name}}"class="form-control"/>
+                            <input type="text" name="name" value="{{$category->name}}"class="form-control border-foo"/>
                             @error('name') <small class="text-danger">{{$message}} </small>@enderror
                         </div>
 
                         <div class="col-md-6 mb-3">
                             <label>Slug</label>
-                            <input type="text" name="slug" value="{{$category->slug}}"class="form-control"/>
+                            <input type="text" name="slug" value="{{$category->slug}}"class="form-control border-foo"/>
                             @error('slug') <small class="text-danger">{{$message}} </small>@enderror
                         </div>
 
                         <div class="col-md-12 mb-3">
                             <label>Description</label>
-                            <textarea name="description" class="form-control" rows="3">{{$category->description}}</textarea>
+                            <textarea name="description" class="form-control border-foo" rows="3">{{$category->description}}</textarea>
                             @error('description') <small class="text-danger">{{$message}} </small>@enderror
                         </div>
 
                         <div class="col-md-6 mb-3">
                             <label>Image</label>
-                            <input type="file" name="image" class="form-control"/>
+                            <input type="file" name="image" class="form-control border-foo"/>
                             <img src="{{asset('/uploads/category/'.$category->image)}}" width="60px" height="60px" />
                             @error('image') <small class="text-danger">{{$message}} </small>@enderror
                         </div>
@@ -52,19 +66,19 @@
                         </div>
                         <div class="col-md-12 mb-3">
                             <label>Meta Title</label>
-                            <input name="meta_title" value="{{$category->meta_title}}" class="form-control"/>
+                            <input name="meta_title" value="{{$category->meta_title}}" class="form-control border-foo"/>
                             @error('meta_title') <small class="text-danger">{{$message}} </small>@enderror
                         </div>
 
                         <div class="col-md-12 mb-3">
                             <label>Meta Keyword</label>
-                            <textarea name="meta_keyword" class="form-control" rows="3">{{$category->meta_keyword}}</textarea>
+                            <textarea name="meta_keyword" class="form-control border-foo" rows="3">{{$category->meta_keyword}}</textarea>
                             @error('meta_keyword') <small class="text-danger">{{$message}} </small>@enderror
                         </div>
 
                         <div class="col-md-12 mb-3">
                             <label>Meta Description</label>
-                            <textarea type="text" name="meta_description" class="form-control" rows="3">{{$category->meta_description}}</textarea>
+                            <textarea type="text" name="meta_description" class="form-control border-foo" rows="3">{{$category->meta_description}}</textarea>
                             @error('meta_description') <small class="text-danger">{{$message}} </small>@enderror
                         </div>
 
