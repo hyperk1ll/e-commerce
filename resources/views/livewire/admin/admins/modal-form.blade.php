@@ -25,6 +25,15 @@
                         <input type="text" wire:model.defer="password" class="form-control">
                         @error('password') <small class="text-danger">{{ $message }}</small> @enderror
                     </div>
+                    <div class="mb-3">
+                        <label>Role</label>
+                        <select wire:model="role_as" class="form-control">
+                            <option value="">Select Role</option>
+                            <option value="0">User</option>
+                            <option value="1">Admin</option>
+                        </select>
+                        @error('role_as') <small class="text-danger">{{ $message }}</small> @enderror
+                    </div>
                 </div>
 
                 <div class="modal-footer">
@@ -69,6 +78,16 @@
                         <div class="mb-3">
                             <label>Admin Password</label>
                             <input type="text" wire:model.defer="password" class="form-control">
+                            @error('password') <small class="text-danger">{{ $message }}</small> @enderror
+                        </div>
+                        <div class="mb-3">
+                            <label>Role</label>
+                            <select wire:model.defer="role_as" class="form-control" >
+                                {{-- make default value is selected if admin then else is user --}}
+                                <option value="1" {{ $role_as == 1 ? 'selected' : '' }}>Admin</option>
+                                <option value="2" {{ $role_as == 2 ? 'selected' : '' }}>User</option>
+
+                            </select>
                             @error('password') <small class="text-danger">{{ $message }}</small> @enderror
                         </div>
                     </div>

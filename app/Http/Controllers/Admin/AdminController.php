@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\AdminFormRequest;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 
 class AdminController extends Controller
@@ -19,22 +20,23 @@ class AdminController extends Controller
     {
         return view('admin.admins.create');
     }
+    
 
-    // public function store(AdminFormRequest $request)
-    // {
-    //     $validateData = $request->validated();
+    public function storeAdmin(AdminFormRequest $request)
+    {
+        $validateData = $request->validated();
 
-    //     $admin = User::findOrFail($validateData['admin_id']);
-    //     $admin->create([
-    //         'admin_id' => $validateData['admin_id'],
-    //         'name' => $validateData['name'],
-    //         'email' => $validateData['email'],
-    //         'password' => bcrypt($validateData['password']),
-    //     ]);
+        $admin = User::findOrFail($validateData['admin_id']);
+        $admin->create([
+            'admin_id' => $validateData['admin_id'],
+            'name' => $validateData['name'],
+            'email' => $validateData['email'],
+            'password' => Hash::make($validateData['password']),
+        ]);
 
-    //     return redirect('/admin/admin')->with('message', 'Admin Added successfully!');
+        return redirect('/admin/admin')->with('message', 'Admin Added successfully!');
 
-    // }
+    }
 
     // public function edit(int $admin_id)
     // {

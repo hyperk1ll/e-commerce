@@ -91,10 +91,14 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group (function () {
     });
 
     Route::controller(App\Http\Controllers\Admin\AdminController::class)->group(function () {
-        Route::get('/admin', 'index');
-        Route::get('/admin/create', 'create');
-
+        Route::get('/admins', 'index');
+        Route::get('/admins/create', 'create');
+        Route::post('/admins', 'store');
+        Route::get('/admins/{admin}/edit', 'edit');
+        Route::put('/admins/{admin}', 'update');
+        Route::get('/admins/{admin}/delete', 'destroy');
     });
+    
 
     
     //Category Routes

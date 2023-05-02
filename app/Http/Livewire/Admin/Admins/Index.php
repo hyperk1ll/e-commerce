@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Admin\Admins;
 
 use Livewire\Component;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class Index extends Component
 {
@@ -13,9 +14,40 @@ class Index extends Component
 
     public function deleteAdmin($admin_id)
     {
-        $admin = User::findOrFail($admin_id);
-        $admin->delete();
-        session()->flash('message', 'Admin Deleted successfully!');
+        $this->admin_id = $admin_id;
+    }
+
+    public function destroyAdmin()
+    {
+        User::findOrFail($this->admin_id)->delete();
+        session()->flash('message', 'Admin Deleted Successfully');
+        $this->dispatchBrowserEvent('close-modal');
+        $this->resetInput();
+    }
+
+
+    public function storeAdmin()
+    {
+
+        $this->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'password' => 'required',
+            'role_as' => 'required',
+        ]);
+
+
+        User::updateOrCreate(['id' => $this->admin_id], [
+            'name' => $this->name,
+            'email' => $this->email,
+            'password' => Hash::make($this->password),
+            'role_as' => $this->role_as,
+
+        ]);
+
+        session()->flash('message', $this->admin_id ? 'Admin Updated successfully!' : 'Admin Added successfully!');
+        $this->dispatchBrowserEvent('close-modal');
+        $this->resetInput();
     }
 
     public function closeModal()
@@ -37,15 +69,16 @@ class Index extends Component
         $this->role_as = null;
     }
 
-    public function editAdmin(int $admin_id)
+    public function editAdmin($admin_id)
     {
-        $this->admin_id = $admin_id;
         $admin = User::findOrFail($admin_id);
+        $this->admin_id = $admin_id;
         $this->name = $admin->name;
         $this->email = $admin->email;
         $this->password = $admin->password;
         $this->role_as = $admin->role_as;
     }
+
 
     public function render()
     {

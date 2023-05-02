@@ -2,13 +2,13 @@
     <ul class="nav">
       <li class="nav-item">
         <a class="nav-link" href="{{ url('admin/dashboard') }}">
-          <i class="mdi mdi-home menu-icon"></i>
+          <i class="bi bi-grid menu-icon"></i>
           <span class="menu-title">Dashboard</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" data-bs-toggle="collapse" href="#ui-category" aria-expanded="false" aria-controls="ui-category">
-          <i class="mdi mdi-circle-outline menu-icon"></i>
+          <i class="bi bi-menu-button-wide menu-icon"></i>
           <span class="menu-title">Category</span>
           <i class="menu-arrow"></i>
         </a>
@@ -21,7 +21,7 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" data-bs-toggle="collapse" href="#ui-products" aria-expanded="false" aria-controls="ui-products">
-          <i class="mdi mdi-file-document-box-outline menu-icon"></i>
+          <i class="bi bi-journal-text menu-icon"></i>
           <span class="menu-title">Products</span>
           <i class="menu-arrow"></i>
         </a>
@@ -35,37 +35,85 @@
 
       <li class="nav-item">
         <a class="nav-link" href="{{ url('admin/brands') }}">
-          <i class="mdi mdi-chart-pie menu-icon"></i>
+          <i class="bi bi-bar-chart menu-icon"></i>
           <span class="menu-title">Brands</span>
         </a>
       </li>
-      {{-- <li class="nav-item">
-        <a class="nav-link" href="{{ url('admin/sliders') }}">
-          <i class="mdi mdi-grid-large menu-icon"></i>
-          <span class="menu-title">Slider</span>
-        </a>
-      </li> --}}
+
       <li class="nav-item">
-        <a class="nav-link" href="{{ url('admin/admin') }}">
-          <i class="mdi mdi-account menu-icon"></i>
+        <a class="nav-link" href="{{ url('admin/admins') }}">
+          <i class="bi bi-person menu-icon"></i>
           <span class="menu-title">Administrator</span>
         </a>
       </li>
-      {{-- <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-          <i class="mdi mdi-account menu-icon"></i>
-          <span class="menu-title">Site Settings</span>
-          <i class="menu-arrow"></i>
-        </a>
-        <div class="collapse" id="auth">
-          <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Login </a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/samples/login-2.html"> Login 2 </a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/samples/register-2.html"> Register 2 </a></li>
-            <li class="nav-item"> <a class="nav-link" href="pages/samples/lock-screen.html"> Lockscreen </a></li>
-          </ul>
-        </div>
-      </li> --}}
+
     </ul>
   </nav>
+
+
+
+
+
+<!-- ======= Sidebar ======= -->
+{{-- <aside id="sidebar" class="sidebar">
+
+  <ul class="sidebar-nav" id="sidebar-nav">
+
+    <li class="nav-item">
+      <a class="nav-link " href="{{ url('admin/dashboard') }}">
+        <i class="bi bi-grid"></i>
+        <span>Dashboard</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#category-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-menu-button-wide"></i><span>Category</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="category-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <li>
+          <a href="{{ url('admin/category/create') }}">
+            <i class="bi bi-circle"></i><span>Add Category</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{ url('admin/category/') }}">
+            <i class="bi bi-circle"></i><span>View Category</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#product-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-journal-text"></i><span>Product</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="product-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <li>
+          <a href="{{ url('admin/products/create') }}">
+            <i class="bi bi-circle"></i><span>Add Product</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{ url('admin/products/') }}">
+            <i class="bi bi-circle"></i><span>View Product</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="{{ url('admin/brands') }}">
+        <i class="bi bi-bar-chart"></i><span>Brand</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="{{ url('admin/admin') }}">
+        <i class="bi bi-person"></i>
+        <span>User</span>
+      </a>
+    </li>
+  </ul>
+   
+</aside> --}}
