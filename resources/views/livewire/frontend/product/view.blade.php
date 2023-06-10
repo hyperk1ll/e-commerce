@@ -20,7 +20,7 @@
                     @if($product->selling_price != $product->original_price)
                         <div>
                             <span class="selling-price"><?php echo "Rp " . number_format("$product->selling_price", 0, ",", "."); ?> </span>
-                            <span class="original-price"><?php echo "Rp " . number_format("$product->original_price", 0, ",", "."); ?></span>
+                            <span class="original-price text-danger text-decoration-line-through"><?php echo "Rp " . number_format("$product->original_price", 0, ",", "."); ?></span>
                         </div>
                         @else
                         <div>
