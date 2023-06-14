@@ -40,12 +40,12 @@
         </a>
       </li>
 
-      <li class="nav-item">
+      {{-- <li class="nav-item">
         <a class="nav-link" href="{{ url('admin/admins') }}">
           <i class="bi bi-person menu-icon"></i>
           <span class="menu-title">Administrator</span>
         </a>
-      </li>
+      </li> --}}
 
     </ul>
   </nav>
