@@ -36,7 +36,7 @@
                     <div class="mt-3">
                         <h5 class="mb-0">Small Description</h5>
                         <p>
-                            {{!! $product->small_description !!}}
+                            {!! $product->small_description !!}
                         </p>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                     </div>
                     <div class="card-body">
                         <p>
-                            {{!! $product->description !!}}
+                            {!! $product->description !!}
                         </p>
                     </div>
                 </div>

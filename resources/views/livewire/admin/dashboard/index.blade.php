@@ -84,6 +84,53 @@
           </div>
       </div>
     </div>
+    <div class="col-md-12">
+      <style>.outstock {
+        margin-top: 10px;
+      }</style>
+      <div>
+        <div class="card outstock">
+            <div class="card-header">
+                <h4>Out of Stock Products</h4>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Product Name</th>
+                            <th>Category</th>
+                            <th>Brand</th>
+                            <th>Quantity</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @forelse ($outOfStockProducts as $product)
+                            <tr>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $product->name }}</td>
+                                <td>{{ $product->category->name}}</td>
+                                <td>{{ $product->brand}}</td>
+                                <td>{{ $product->quantity }}</td>
+                                <td>
+                                  <a href="{{ url('admin/products/'.$product->id.'/edit')}}" class="btn btn-sm btn-success">Edit</a>
+                                  <a href="{{ url('admin/products/'.$product->id.'/delete')}}" onclick="return confirm ('Are you sure, you want to delete this data?')"class="btn btn-sm btn-danger">Delete</a>
+                                </td>
+                            </tr>
+                        @empty
+                            <tr>
+                                <td colspan="6" class="text-center">No Out-of-Stock Products</td>
+                            </tr>
+                        @endforelse
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    
+  </div>
   </div>
 
 

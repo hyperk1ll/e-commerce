@@ -177,7 +177,7 @@
                   <i class="mdi mdi-magnify"></i>
                 </span>
               </div>
-              <input type="text" class="form-control" placeholder="Search now" aria-label="search" aria-describedby="search">
+              <input type="text" class="form-control" placeholder="" aria-label="search" aria-describedby="search" disabled>
             </div>
           </li>
         </ul>
