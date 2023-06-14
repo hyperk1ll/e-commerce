@@ -80,6 +80,7 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script>
+    const overlay = document.querySelector('.overlay');
     const popup = document.querySelector('.popup');
     const close = document.querySelector('.close');
     const link = document.querySelector('.a a')
@@ -87,15 +88,18 @@
     window.onload = function(){
         setTimeout(function(){
             popup.style.display = "block"
+            overlay.style.display = "block"
         }, 2000);
     }
 
     close.addEventListener('click', () =>{
         popup.style.display = "none";
+        overlay.style.display = "none";
     })
 
     link.addEventListener('click', () =>{
         popup.style.display = "none";
+        overlay.style.display = "none";
     })
   </script>
 

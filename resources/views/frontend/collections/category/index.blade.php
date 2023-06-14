@@ -7,7 +7,7 @@
 @include('layouts.inc.frontend.slider')
 
 @include('layouts.inc.frontend.client')
-    
+<div class="overlay">
 <div class="popup">
   <div class="contentBox">
       <div class="close">
@@ -24,6 +24,7 @@
           </div>
       </div>
   </div>
+</div>
 </div>
 
 <section id="services" class="services section-bg">
