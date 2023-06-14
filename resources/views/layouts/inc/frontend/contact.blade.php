@@ -3,6 +3,7 @@
   <link href="{{asset('/assets/img/favicon.png')}}" rel="icon">
   <link href="{{asset('/assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
   
+  
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   
@@ -56,7 +57,7 @@
         </div>
 
         <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-          <form action="/forms/contact.php" method="post" role="form" class="php-email-form">
+          <form action="https://api.emailjs.com/api/v1.0/email/send-form" method="POST" role="form" class="php-email-form">
             <div class="row">
               <div class="form-group col-md-6">
                 <label for="name">Your Name</label>
@@ -89,4 +90,15 @@
     </div>
   </section><!-- End Contact Section -->
 
+  <script>
+        // Mendapatkan referensi ke tombol "Send Message"
+    const sendButton = document.querySelector('form.php-email-form button[type="submit"]');
+
+    // Menambahkan event listener ke tombol "Send Message"
+    sendButton.addEventListener('click', (event) => {
+      event.preventDefault(); // Mencegah form dikirim secara default
+      // Panggil fungsi untuk mengirim email
+      sendEmail();
+    });
+  </script>
   <script src="/mtu-catalog/resources/js/email.js"></script>
