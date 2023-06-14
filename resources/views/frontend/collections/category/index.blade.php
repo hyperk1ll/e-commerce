@@ -19,7 +19,7 @@
       <div class="content">
           <div class="a">
               <h3>Welcome!</h3>
-              <p>As a client, u can only see the products from the catalog, if you interested in any, please contact us!</p>
+              <p>As a client, you can only view products from the catalog. If anything catches your eye, please contact us!</p>
               <a href="#"> Continue to catalog</a>
           </div>
       </div>
