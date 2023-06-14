@@ -2,10 +2,11 @@
 
   <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center">
-  
-      <h1 class="logo me-auto"><a href="{{ url('/') }}">PT. Mahir Tekno Utama</a></h1>
+
+      {{-- <a href="index.html" class="logo me-auto"><img src="{{asset('/assets/img/logo.png')}}" alt="" class="img-fluid"></a> --}}
+      <h1 class="logo me-auto"><a href="{{ url('/') }}">MTU CATALOG</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      
   
       <nav id="navbar" class="navbar">
         <ul>
