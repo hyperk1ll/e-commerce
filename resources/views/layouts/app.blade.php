@@ -49,6 +49,7 @@
     @livewireStyles
 </head>
 <body>
+    
     <div class="container-scroller">
         
         {{-- <div class="container-fluid page-body-wrapper"> --}}
@@ -78,6 +79,25 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    const popup = document.querySelector('.popup');
+    const close = document.querySelector('.close');
+    const link = document.querySelector('.a a')
+
+    window.onload = function(){
+        setTimeout(function(){
+            popup.style.display = "block"
+        }, 2000);
+    }
+
+    close.addEventListener('click', () =>{
+        popup.style.display = "none";
+    })
+
+    link.addEventListener('click', () =>{
+        popup.style.display = "none";
+    })
+  </script>
 
     @livewireScripts
 </body>

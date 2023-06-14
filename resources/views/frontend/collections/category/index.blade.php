@@ -8,6 +8,24 @@
 
 @include('layouts.inc.frontend.client')
     
+<div class="popup">
+  <div class="contentBox">
+      <div class="close">
+
+      </div>
+      <div class="imgBx">
+          <img src="{{asset('/assets/img/gift.png')}}" alt="">
+      </div>
+      <div class="content">
+          <div class="a">
+              <h3>Welcome!</h3>
+              <p>As a client, u can only see the products from the catalog, if you interested in any, please contact us!</p>
+              <a href="#"> Continue to catalog</a>
+          </div>
+      </div>
+  </div>
+</div>
+
 <section id="services" class="services section-bg">
   <div class="container">
     <div class="section-title "data-aos="fade-up">
