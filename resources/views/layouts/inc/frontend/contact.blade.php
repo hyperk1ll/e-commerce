@@ -92,7 +92,7 @@
 
   <script>
         // Mendapatkan referensi ke tombol "Send Message"
-    const sendButton = document.querySelector('form.php-email-form button[type="submit"]');
+    const sendButton = document.querySelector('.text-center .[type="submit"]');
 
     // Menambahkan event listener ke tombol "Send Message"
     sendButton.addEventListener('click', (event) => {

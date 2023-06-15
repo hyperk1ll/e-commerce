@@ -75,6 +75,7 @@ Route::controller(App\Http\Controllers\FrontEndController::class)->group(functio
     Route::get('/collections/{category_slug}', 'products');
     Route::get('/collections/{category_slug}/{product_slug}', 'productView');
     Route::get('search', 'searchProducts');
+    
 });
 // Auth::routes();
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group (function () {

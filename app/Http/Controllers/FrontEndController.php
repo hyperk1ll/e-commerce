@@ -69,4 +69,5 @@ class FrontEndController extends Controller
             return redirect()->back()->with('message','Empty Search');
         }
     }
+    
 }

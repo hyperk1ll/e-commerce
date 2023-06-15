@@ -11,7 +11,6 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto " href="{{ url('/') }}">Home</a></li>
-          <li><a class="nav-link scrollto" href="{{ url('/#client') }}">Clients</a></li>
           <li><a class="nav-link scrollto" href="{{ url('/#contact') }}">Contact</a></li>
           <li class="dropdown"><a href="#"><span>Categories</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -34,6 +33,7 @@
                 </li>
                 @endforeach
             </ul>
+          <li><a class="nav-link scrollto" href="/#howto">How to Buy Our Products?</a></li>
         </li>
           @guest
           <li><a class="getstarted scrollto" href="{{ route('login') }}">Admin</a></li>

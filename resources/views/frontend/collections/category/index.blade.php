@@ -50,7 +50,7 @@
 
   </div>
 </section>
-
+@include('layouts.inc.frontend.howto')
 @include('layouts.inc.frontend.contact')
 
 @endsection

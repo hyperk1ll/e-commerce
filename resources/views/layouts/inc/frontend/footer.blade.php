@@ -19,20 +19,19 @@
         <div class="col-lg-3 col-md-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://mahirtekno.co.id/#home">Home</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://mahirtekno.co.id/#about">About us</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://mahirtekno.co.id/#pelanggan">Our Clients</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://mahirtekno.co.id/#partner">Our Partners</a></li>
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-6 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Network Security</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Managed Service</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">System Insfrasturcture</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://mahirtekno.co.id/#services">Network Security</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://mahirtekno.co.id/#services">Managed Service</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="https://mahirtekno.co.id/#services">System Insfrasturcture</a></li>
           </ul>
         </div>
 
