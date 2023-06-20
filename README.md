@@ -7,7 +7,7 @@ MTU-Catalog is an e-catalog website developed for PT. Mahir Tekno Utama. It prov
 - Browse and search for products by category, brands, or other filters.
 - View detailed product information, including descriptions, specifications, and images.
 - Manage admin accounts and authentication.
-- Admin dashboard for managing products, categories, and accounts.
+- Admin dashboard for managing products, categories, and brands.
 
 ## Technologies Used
 
