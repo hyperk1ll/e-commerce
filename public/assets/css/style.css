@@ -2039,3 +2039,38 @@ section {
   z-index: 999;
   display: none;
 }
+
+.bubble-review {
+  display: flex;
+  align-items: flex-start;
+  max-width: 400px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Menambahkan margin-bottom untuk memberi jarak antara bubble review */
+  margin-inline: 20px;
+}
+
+.bubble-icon {
+  margin-right: 10px;
+  font-size: 24px;
+  color: #888;
+}
+
+.bubble-content {
+  flex: 1;
+}
+
+.review-text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.review-author {
+  margin-top: 10px;
+  font-size: 14px;
+  font-style: italic;
+  color: #888;
+}

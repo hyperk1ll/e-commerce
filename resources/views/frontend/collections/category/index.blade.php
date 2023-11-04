@@ -7,6 +7,7 @@
 @include('layouts.inc.frontend.slider')
 
 @include('layouts.inc.frontend.client')
+@include('layouts.inc.frontend.review')
 <div class="overlay">
 <div class="popup">
   <div class="contentBox">
