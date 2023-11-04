@@ -28,8 +28,8 @@
     <div class="row">
       
       <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200"> 
-        <h1>PT. Mahir Tekno Utama</h1>
-        <h2>We provide effective and innovative information technology solutions that adapt to technological developments by providing facilities, support and professional staff in their fields.</h2>
+        <h1>PT. MAHIR TEKNO UTAMA</h1>
+        <h2 style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">We provide effective and innovative information technology solutions that adapt to technological developments by providing facilities, support and professional staff in their fields.</h2>
         <br>
         <br>
         <div class="d-flex justify-content-center justify-content-lg-start">
@@ -51,7 +51,7 @@
       </div>
      
       <div class="col-lg-6 order-1 order-lg-2 hero-img"  data-aos=zoom-in data-aos-delay="200"> 
-        <img src="images/mtu.transparent.png" class="img-fluid animated" alt="">
+        <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
       </div>
     </div>
   </div>
