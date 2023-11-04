@@ -32,7 +32,7 @@
   <div class="container">
     <div class="section-title "data-aos="fade-up">
       <h2>Categories</h2>
-      <p>Berikut adalah beberapa kategori barang yang kami miliki </p>
+      <p>Below are some categories that we have!</p>
     </div>
 
     <div class="row">
