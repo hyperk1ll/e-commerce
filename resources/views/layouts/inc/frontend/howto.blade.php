@@ -5,8 +5,9 @@
         <br> 
         <div class="section-title "data-aos="fade-up"> 
             <h2>How to Buy Our Products</h2> 
-            <p style="font-size: 18px;">Apabila ada barang yang ingin anda beli, silahkan hubungi kami pada kontak yang tertera di bawah saat jam kerja (07.00-15.00, GMT+7).</p> 
-            <p style="font-size: 18px;"> Kami akan menghubungi anda kembali maksimal 3 hari kerja. Terima Kasih! </p> 
+            <p style="font-size: 18px;">
+                If there is an item you want to buy, please contact us at the contact listed below during working hours (07.00-15.00, GMT+7).</p> 
+            <p style="font-size: 18px;">We will contact you back within 3 working days. Thank You!</p> 
     </div>
     <br>
     <br>

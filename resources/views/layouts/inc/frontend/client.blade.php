@@ -27,7 +27,7 @@
       <br>
       <div class="section-title "data-aos="fade-up">
         <h2>Our Beloved Clients</h2>
-        <p>Berikut adalah sebagian dari klien yang pernah bekerja sama dengan kami, dan masih banyak lagi selain mereka! </p>
+        <p>Here are some of the clients we have worked with, and many more besides them! </p>
       </div>
       <div class="row" data-aos=zoom-in>
 

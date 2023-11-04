@@ -38,7 +38,7 @@
           <div class="container">
           <div class="row">
             <div class="col-lg-50">
-            <h4>Ayo cari apa yang kamu butuhkan!</h4>
+            <h4>Come find what you need!</h4>
             <form action="{{ url('search')}}" method="GET">
               <input type="search" name="search" class="form-control" placeholder="Search here" aria-label="search" aria-describedby="search"><input type="submit" value="Search">
             </form>
