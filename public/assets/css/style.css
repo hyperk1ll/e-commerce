@@ -463,7 +463,7 @@ h6 {
 #hero {
   width: 100%;
   height: 80vh;
-  background: #37517e;
+  background: #188ff0;
 }
 
 #hero .container {
@@ -922,6 +922,7 @@ section {
   padding: 50px 30px;
   transition: all ease-in-out 0.4s;
   background: #fff;
+  margin-bottom: 10px;
 }
 
 .services .icon-box .icon {
@@ -1713,7 +1714,7 @@ section {
 --------------------------------------------------------------*/
 #search {
   font-size: 14px;
-  background: #37517e;
+  background: #188ff0;
 }
 
 #search .search-searchbar {

@@ -24,9 +24,9 @@ class Product extends Model
         'quantity',
         'trending',
         'status',
-        'meta_title',
-        'meta_keyword',
-        'meta_description',
+        // 'meta_title',
+        // 'meta_keyword',
+        // 'meta_description',
     ];
 
     public function category()

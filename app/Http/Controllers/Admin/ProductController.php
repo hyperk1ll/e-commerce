@@ -45,9 +45,9 @@ class ProductController extends Controller
             'quantity' => $validateData['quantity'],
             'trending' => $request->trending == true ? '1':'0',
             'status' => $request->status == true ? '1':'0',
-            'meta_title' => $validateData['meta_title'],
-            'meta_keyword' => $validateData['meta_keyword'],
-            'meta_description' => $validateData['meta_description'],
+            // 'meta_title' => $validateData['meta_title'],
+            // 'meta_keyword' => $validateData['meta_keyword'],
+            // 'meta_description' => $validateData['meta_description'],
         ]);
 
         if($request->hasFile('image')) {
@@ -105,9 +105,9 @@ class ProductController extends Controller
                 'quantity' => $validateData['quantity'],
                 'trending' => $request->trending == true ? '1':'0',
                 'status' => $request->status == true ? '1':'0',
-                'meta_title' => $validateData['meta_title'],
-                'meta_keyword' => $validateData['meta_keyword'],
-                'meta_description' => $validateData['meta_description'],
+                // 'meta_title' => $validateData['meta_title'],
+                // 'meta_keyword' => $validateData['meta_keyword'],
+                // 'meta_description' => $validateData['meta_description'],
             ]);
 
             if($request->hasFile('image')) {

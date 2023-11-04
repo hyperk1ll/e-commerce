@@ -10386,7 +10386,7 @@ progress {
 }
 
 .table-bordered > :not(caption) > * {
-  border-width: 1px 0;
+  border-width: 2px 0;
 }
 
 .table-bordered > :not(caption) > * > * {
@@ -21773,6 +21773,7 @@ select.form-control.border-dark:focus, .dataTables_wrapper select.border-dark:fo
   line-height: 2.812rem;
   text-align: center;
   background: #4d83ff;
+  
 }
 
 .icon-box-primary i {

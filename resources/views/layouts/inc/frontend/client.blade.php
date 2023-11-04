@@ -32,27 +32,45 @@
       <div class="row" data-aos=zoom-in>
 
         <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-          <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+          <a href="https://www.asiapacificfibers.com/" target="_blank">
+            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+            {{-- <p class="link-dark">Asia Pacific Fibers</p> --}}
+          </a>
         </div>
 
         <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-          <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+          <a href="https://www.bkkbn.go.id/" target="_blank">
+            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+            {{-- <p class="link-dark">BKKBN</p> --}}
+          </a>
         </div>
 
         <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-          <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+          <a href="https://www.truemoney.co.id/" target="_blank">
+            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+            {{-- <p class="link-dark">True Money</p> --}}
+          </a>
         </div>
 
         <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-          <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+          <a href="https://cj.co.id/" target="_blank">
+            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+            {{-- <p class="link-dark">CJ Cheil Jedang</p> --}}
+          </a>
         </div>
 
         <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-          <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+          <a href="https://www.menlhk.go.id/" target="_blank">
+            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+            {{-- <p class="link-dark">KLHK</p> --}}
+          </a>
         </div>
 
         <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-          <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+          <a href="https://www.setneg.go.id/" target="_blank">
+            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+            {{-- <p class="link-dark">Setneg</p> --}}
+          </a>
         </div>
 
       </div>

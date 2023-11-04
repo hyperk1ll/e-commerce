@@ -43,9 +43,9 @@ class CategoryController extends Controller
         }
 
 
-        $category->meta_title = $validateData['meta_title'];
-        $category->meta_keyword = $validateData['meta_keyword'];
-        $category->meta_description = $validateData['meta_description'];
+        // $category->meta_title = $validateData['meta_title'];
+        // $category->meta_keyword = $validateData['meta_keyword'];
+        // $category->meta_description = $validateData['meta_description'];
 
         $category->status = $request->status == true ? '1' : '0';
         $category->save();
@@ -87,9 +87,9 @@ class CategoryController extends Controller
         }
 
 
-        $category->meta_title = $validateData['meta_title'];
-        $category->meta_keyword = $validateData['meta_keyword'];
-        $category->meta_description = $validateData['meta_description'];
+        // $category->meta_title = $validateData['meta_title'];
+        // $category->meta_keyword = $validateData['meta_keyword'];
+        // $category->meta_description = $validateData['meta_description'];
 
         $category->status = $request->status == true ? '1' : '0';
         $category->update();

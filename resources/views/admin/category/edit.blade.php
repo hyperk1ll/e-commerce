@@ -14,6 +14,30 @@
       -moz-appearance: none;
       appearance: none;
     }
+
+    h4 {
+    padding: 0;
+  }
+  h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    font-weight: 500;
+    color: inherit;
+  }
+
+
+  h4 {
+    font-size: 1.25rem;
+  }
+h4
+{
+font-weight: 400;
+font-size: 1.5rem;
+line-height: 1.2;
+margin-top: 20px;
+margin-bottom: 20px;
+}
 </style>
 
 <div class="row">
@@ -61,7 +85,7 @@
                     
                         </div>
 
-                        <div class="col-md-12">
+                        {{-- <div class="col-md-12">
                             <h4> SEO Tags</h4>
                         </div>
                         <div class="col-md-12 mb-3">
@@ -80,7 +104,7 @@
                             <label>Meta Description</label>
                             <textarea type="text" name="meta_description" class="form-control border-foo" rows="3">{{$category->meta_description}}</textarea>
                             @error('meta_description') <small class="text-danger">{{$message}} </small>@enderror
-                        </div>
+                        </div> --}}
 
                         <div class="col-md-12 mb-3">
                             <button type="submit" class="btn btn-primary float-end">Update</button>

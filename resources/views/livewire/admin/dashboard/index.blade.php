@@ -5,12 +5,30 @@
 
 
 <!-- Template Main CSS File -->
-{{-- <link href="assets/css/style.css" rel="stylesheet"> --}}
+<link rel="stylesheet" href="{{ asset('admin/css/dashboard.css') }}">
 
 <style>
 .sales-card {
   margin-bottom: 10px; /* Adjust the value as per your desired spacing */
 }
+/* Container for the three boxes */
+.container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Individual boxes for product, category, and brand counts */
+        .box {
+          text-align: center;
+            padding: 20px;
+            background-color: #478ac9;
+            color: #fff;
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+            width: 400px; /* Adjust the width as needed */
+            margin: 10px;
+        }
+
 </style>
 
 <div class="row">
@@ -25,63 +43,23 @@
               <h4>Dashboard
               </h4>
           </div>
-          <div class="card-body">
-            <div class="col-xxl-4 col-md-6">
-              <div class="card info-card sales-card">
-                <div class="card-body">
-                  <h5 class="card-title">Category</h5>
-          
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-menu-button-wide menu-icon"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>{{ $this->count_category }}</h6>
-          
-                    </div>
-                  </div>
+            <div class="card-body">
+              <div class="container">
+                <div class="box">
+                    <h1>{{$this->count_products}}</h1>
+                    <h4>Total Product</h4>
+                </div>
+                <div class="box">
+                    <h1>{{$this->count_category}}</h1>
+                    <h4>Total Category</h4>
+                </div>
+                <div class="box">
+                    <h1>{{$this->count_brand}}</h1>
+                    <h4>Total Brand</h4>
                 </div>
               </div>
-            </div>
 
-            <div class="col-xxl-4 col-md-6">
-              <div class="card info-card sales-card">
-                <div class="card-body">
-                  <h5 class="card-title">Products</h5>
-          
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-journal-text menu-icon"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>{{ $this->count_products }}</h6>
-          
-                    </div>
-                  </div>
-                </div>
-          
-              </div>
-            </div>
-            <div class="col-xxl-4 col-md-6">
-              <div class="card info-card sales-card">
-                <div class="card-body">
-                  <h5 class="card-title">Brands</h5>
-          
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-bar-chart menu-icon"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6>{{ $this->count_brand }}</h6>
-          
-                    </div>
-                  </div>
-                </div>
-          
-              </div>
-            </div>
-
-          </div>
+        </div>
       </div>
     </div>
     <div class="col-md-12">

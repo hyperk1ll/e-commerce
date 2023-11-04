@@ -2,6 +2,33 @@
 
 @section('content')
 
+<style>
+      h4 {
+    padding: 0;
+  }
+  h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    font-weight: 500;
+    color: inherit;
+  }
+
+
+  h4 {
+    font-size: 1.25rem;
+  }
+h4
+{
+font-weight: 400;
+font-size: 1.5rem;
+line-height: 1.2;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+</style>
+
 <div class="row">
     <div class="col-md-12">
         @if(session('message'))
@@ -32,11 +59,11 @@
                                 Home
                             </button>
                         </li>
-                        <li class="nav-item" role="presentation">
+                        {{-- <li class="nav-item" role="presentation">
                             <button class="nav-link" id="seotag-tab" data-bs-toggle="tab" data-bs-target="#seotag-tab-pane" type="button" role="tab" aria-controls="seotag-tab-pane" aria-selected="false">
                                 SEO Tags
                             </button>
-                        </li>
+                        </li> --}}
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="details-tab" data-bs-toggle="tab" data-bs-target="#details-tab-pane" type="button" role="tab" aria-controls="details-tab-pane" aria-selected="false">
                                 Details
@@ -87,7 +114,7 @@
                                 <textarea name="description" class="form-control" rows="4">{{$product->description}}</textarea>
                             </div>
                         </div>
-                        <div class="tab-pane fade border p-3" id="seotag-tab-pane" role="tabpanel" aria-labelledby="seotag-tab" tabindex="0">
+                        {{-- <div class="tab-pane fade border p-3" id="seotag-tab-pane" role="tabpanel" aria-labelledby="seotag-tab" tabindex="0">
                             <div class="mb-3">
                                 <label>Meta Title</label>
                                 <input type="text" name="meta_title" value="{{$product->meta_title}}" class="form-control">
@@ -100,7 +127,7 @@
                                 <label>Meta Keyword</label>
                                 <textarea name="meta_keyword" class="form-control" rows="4">{{$product->meta_keyword}}</textarea>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="tab-pane fade border p-3" id="details-tab-pane" role="tabpanel" aria-labelledby="details-tab" tabindex="0">
                             <div class="row">
                                 <div class="col-md-4">
@@ -129,7 +156,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
-                                        <label>Status</label>
+                                        <label>Hide</label>
                                         <input type="checkbox" name="status"  {{$product->status == '1' ? 'checked':''}}style="width: 25px; height: 25px;">
                                     </div>
                                 </div>

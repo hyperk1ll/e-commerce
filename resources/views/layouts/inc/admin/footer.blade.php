@@ -7,7 +7,7 @@
     padding: 0px;
     background-color:rgb(37, 179, 250);
     color:rgb(37, 179, 250);
-    position: fixed;
+    position: sticky;
     left: 0;
     bottom: 0;
     width: 100%;

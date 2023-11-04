@@ -1,15 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-{{ $product->meta_title }}
-@endsection
-
-@section('meta_keyword')
-{{ $product->keyword }}
-@endsection
-
-@section('meta_description')
-{{ $product->meta_description }}
+{{ $product->name }}
 @endsection
 
 @include('layouts.inc.frontend.navbar2')

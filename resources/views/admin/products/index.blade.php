@@ -2,6 +2,33 @@
 
 @section('content')
 
+<style>
+      h4 {
+    padding: 0;
+  }
+  h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    font-weight: 500;
+    color: inherit;
+  }
+
+
+  h4 {
+    font-size: 1.25rem;
+  }
+h4
+{
+font-weight: 400;
+font-size: 1.5rem;
+line-height: 1.2;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+</style>
+
 <div class="row">
     <div class="col-md-12">
         @if (session('message'))
@@ -16,7 +43,7 @@
                 </h4>
             </div>
             <div class="card-body">
-                <table class="table tbale-bordered table-striped">
+                <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
                             <th>ID</th>

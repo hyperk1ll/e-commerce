@@ -40,18 +40,6 @@ class CategoryFormRequest extends FormRequest
                 'nullable',
                 'mimes:jpg,jpeg,png'
             ],
-            'meta_title' => [
-                'required',
-                'string'
-            ],
-            'meta_keyword' => [
-                'required',
-                'string'
-            ],
-            'meta_description' => [
-                'required',
-                'string'
-            ],
         ];
     }
 }

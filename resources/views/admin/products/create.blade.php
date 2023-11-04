@@ -14,6 +14,30 @@
       -moz-appearance: none;
       appearance: none;
     }
+
+    h4 {
+    padding: 0;
+  }
+  h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    font-weight: 500;
+    color: inherit;
+  }
+
+
+  h4 {
+    font-size: 1.25rem;
+  }
+h4
+{
+font-weight: 400;
+font-size: 1.5rem;
+line-height: 1.2;
+margin-top: 20px;
+margin-bottom: 20px;
+}
 </style>
 
 <div class="row">
@@ -42,11 +66,11 @@
                                 Home
                             </button>
                         </li>
-                        <li class="nav-item" role="presentation">
+                        {{-- <li class="nav-item" role="presentation">
                             <button class="nav-link" id="seotag-tab" data-bs-toggle="tab" data-bs-target="#seotag-tab-pane" type="button" role="tab" aria-controls="seotag-tab-pane" aria-selected="false">
                                 SEO Tags
                             </button>
-                        </li>
+                        </li> --}}
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="details-tab" data-bs-toggle="tab" data-bs-target="#details-tab-pane" type="button" role="tab" aria-controls="details-tab-pane" aria-selected="false">
                                 Details
@@ -93,7 +117,7 @@
                                 <textarea name="description" class="form-control border-foo" rows="4"></textarea>
                             </div>
                         </div>
-                        <div class="tab-pane fade border p-3" id="seotag-tab-pane" role="tabpanel" aria-labelledby="seotag-tab" tabindex="0">
+                        {{-- <div class="tab-pane fade border p-3" id="seotag-tab-pane" role="tabpanel" aria-labelledby="seotag-tab" tabindex="0">
                             <div class="mb-3">
                                 <label>Meta Title</label>
                                 <input type="text" name="meta_title" class="form-control border-foo">
@@ -106,7 +130,7 @@
                                 <label>Meta Keyword</label>
                                 <textarea name="meta_keyword" class="form-control border-foo" rows="4"></textarea>
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="tab-pane fade border p-3" id="details-tab-pane" role="tabpanel" aria-labelledby="details-tab" tabindex="0">
                             <div class="row">
                                 <div class="col-md-4">
@@ -135,7 +159,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
-                                        <label>Status</label>
+                                        <label>Hide</label>
                                         <input type="checkbox" name="status" style="width: 50px; height: 50px;">
                                     </div>
                                 </div>
