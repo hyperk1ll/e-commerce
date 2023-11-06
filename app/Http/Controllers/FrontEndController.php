@@ -11,8 +11,10 @@ class FrontEndController extends Controller
 {
     public function index()
     {
-        return view('frontend.index');
+        $trendingProducts = Product::where('trending','1')->latest()->take(10)->get();
+        return view('frontend.index', compact('trendingProducts'));
     }
+
 
     public function categories() 
     {

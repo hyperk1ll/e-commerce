@@ -6,6 +6,8 @@ use App\Models\Category;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Models\Slider;
 use App\Models\Brand;
+use App\Models\Product;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,8 +23,10 @@ Route::get('/', function () {
     $categories = Category::where('status','0')->get();
     $sliders = Slider::where('status','0')->get();
     $brands = Brand::where('status','0')->get();
-    return view('frontend.collections.category.index', compact('categories', 'sliders'));
+    $trendingProducts = Product::where('trending','1')->get();
+    return view('frontend.collections.category.index', compact('categories', 'sliders', 'trendingProducts'));
 });
+
 
 
 Route::get('/collections/{category_slug}', function ($category_slug) {

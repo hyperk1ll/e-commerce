@@ -8,6 +8,7 @@
 
 @include('layouts.inc.frontend.client')
 @include('layouts.inc.frontend.review')
+@include('layouts.inc.frontend.trending')
 <div class="overlay">
 <div class="popup">
   <div class="contentBox">
