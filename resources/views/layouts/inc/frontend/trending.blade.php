@@ -6,9 +6,9 @@
       </div>
   
       @if($trendingProducts)
-      <div class="row">
+      <div class="row owl-carousel owl-theme trending-product">
         @foreach ($trendingProducts as $productItem)
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos=zoom-in data-aos-delay="100">
+          <div class=" d-flex align-items-stretch " data-aos=zoom-in data-aos-delay="100">
             <div class="icon-box">
               <div class="icon">
                 <img src="{{ asset($productItem->productImages[0]->image) }}" alt="{{ $productItem->name }}" class="w-100">
@@ -23,3 +23,26 @@
       @endif
     </div>
   </section>
+
+  @section('script')
+
+  <script>
+    $('.trending-product').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:4
+        }
+    }
+})
+  </script>
+
+  @endsection

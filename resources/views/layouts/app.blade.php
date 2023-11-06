@@ -28,6 +28,10 @@
   <link href="{{asset('/assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
   <link href="{{asset('/assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
   
+  {{-- Owl Carousel --}}
+  <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css">
+
   <!-- Template Main CSS File -->
   <link href="{{asset('/assets/css/style.css')}}" rel="stylesheet">
     <!-- plugins:css -->
@@ -44,6 +48,9 @@
     <link rel="shortcut icon" href="{{  asset('admin/images/mtu.transparent.png') }}" />
 
     <script> src="https://unpkg.com/aos@next/dist/aos.js"</script>
+    
+
+    
   
     @livewireStyles
 </head>
@@ -75,6 +82,9 @@
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <script src="assets/js/owl.carousel.min.js"></script>
+    @yield('script')
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
