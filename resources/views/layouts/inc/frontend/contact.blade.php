@@ -56,25 +56,43 @@
 
         </div>
 
+        @if(Session::has('success'))
+          <div class="alert alert-success">
+            {{Session::get('success')}}
+          </div>
+        @endif
+
         <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
           <form action="https://api.emailjs.com/api/v1.0/email/send-form" method="POST" role="form" class="php-email-form">
             <div class="row">
               <div class="form-group col-md-6">
                 <label for="name">Your Name</label>
                 <input type="text" name="name" class="form-control" id="name" required>
+                  @if ($errors->has('name'))
+                      <span class="text-danger">{{ $errors->first('name') }}</span>
+                  @endif
               </div>
               <div class="form-group col-md-6">
-                <label for="name">Your Email</label>
+                <label for="email">Your Email</label>
                 <input type="email" class="form-control" name="email" id="email" required>
+                  @if ($errors->has('email'))
+                    <span class="text-danger">{{ $errors->first('email') }}</span>
+                  @endif
               </div>
             </div>
             <div class="form-group">
-              <label for="name">Subject</label>
+              <label for="subject">Subject</label>
               <input type="text" class="form-control" name="subject" id="subject" required>
+                @if ($errors->has('subject'))
+                  <span class="text-danger">{{ $errors->first('subject') }}</span>
+                @endif
             </div>
             <div class="form-group">
-              <label for="name">Message</label>
+              <label for="message">Message</label>
               <textarea class="form-control" name="message" rows="10" required></textarea>
+                @if ($errors->has('message'))
+                  <span class="text-danger">{{ $errors->first('message') }}</span>
+                @endif
             </div>
             <div class="my-3">
               <div class="loading">Loading</div>
@@ -84,6 +102,7 @@
             <div class="text-center"><button type="submit">Send Message</button></div>
           </form>
         </div>
+  
 
       </div>
 

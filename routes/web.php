@@ -21,12 +21,13 @@ use App\Models\Product;
 
 Route::get('/', function () {
     $categories = Category::where('status','0')->get();
-    $sliders = Slider::where('status','0')->get();
     $brands = Brand::where('status','0')->get();
     $trendingProducts = Product::where('trending','1')->get();
-    return view('frontend.collections.category.index', compact('categories', 'sliders', 'trendingProducts'));
+    return view('frontend.collections.category.index', compact('categories', 'trendingProducts'));
 });
 
+Route::get('contact-us', [ContactController::class, 'index']);
+Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
 
 
 Route::get('/collections/{category_slug}', function ($category_slug) {
