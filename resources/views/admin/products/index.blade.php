@@ -2,95 +2,79 @@
 
 @section('content')
 
-<style>
-      h4 {
-    padding: 0;
-  }
-  h4 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    line-height: 1.2;
-    font-weight: 500;
-    color: inherit;
-  }
 
 
-  h4 {
-    font-size: 1.25rem;
-  }
-h4
-{
-font-weight: 400;
-font-size: 1.5rem;
-line-height: 1.2;
-margin-top: 20px;
-margin-bottom: 20px;
-}
+<div class="content-header">
+    <!-- Main content -->
+    <section class="content">
+       <div class="container-fluid">
+         <!-- /.row -->
+            <div class="row">
+                <div class="col-md-12">
+                    @if (session('message'))
+                        <div class="alert alert-success">
+                            {{ session('message') }}
+                        </div>
+                    @endif
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Products</h3>
+            
+                            <div class="card-tools">
+                              <a href="{{ url('admin/products/create') }}" class="btn btn-primary btn-sm">Add Products</a>
+                            </div>
+                          </div>
+                        <div class="card-body">
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Category</th>
+                                        <th>Product</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @forelse ($products as $product)
+                                    <tr>
+                                        <td>{{$product->id}}</td>
+                                        <td>
+                                            @if($product->category)
+                                            {{$product->category->name}}
+                                            @else 
+                                                No Category
+                                            @endif
+                                        </td>
+                                        <td>{{$product->name}}</td>
+                                        <td>{{$product->selling_price}}</td>
+                                        <td>{{$product->quantity}}</td>
+                                        <td>{{$product->status == '1' ? 'Hidden':'Visible'}}</td>
+                                        <td>
+                                            <a href="{{ url('admin/products/'.$product->id.'/edit')}}" class="btn btn-sm btn-success">Edit</a>
+                                            <a href="{{ url('admin/products/'.$product->id.'/delete')}}" onclick="return confirm ('Are you sure, you want to delete this data?')"class="btn btn-sm btn-danger">Delete</a>
+                                        </td>
+                                    </tr>
+                                    @empty
+                                    <tr>
+                                        <td colspan="7">
+                                            No Products availabe
+                                        </td>
+                                    </tr>
+                                        
+                                    @endforelse
+                                    
+                                </tbody>
+                            </table>
 
-</style>
-
-<div class="row">
-    <div class="col-md-12">
-        @if (session('message'))
-            <div class="alert alert-success">
-                {{ session('message') }}
+                        </div>
+                    </div>
+                </div>
             </div>
-        @endif
-        <div class="card">
-            <div class="card-header">
-                <h4>Products
-                    <a href="{{ url('admin/products/create') }}" class="btn btn-primary float-end">Add Product</a>
-                </h4>
-            </div>
-            <div class="card-body">
-                <table class="table table-bordered table-striped">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Category</th>
-                            <th>Product</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Status</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @forelse ($products as $product)
-                        <tr>
-                            <td>{{$product->id}}</td>
-                            <td>
-                                @if($product->category)
-                                {{$product->category->name}}
-                                @else 
-                                    No Category
-                                @endif
-                            </td>
-                            <td>{{$product->name}}</td>
-                            <td>{{$product->selling_price}}</td>
-                            <td>{{$product->quantity}}</td>
-                            <td>{{$product->status == '1' ? 'Hidden':'Visible'}}</td>
-                            <td>
-                                <a href="{{ url('admin/products/'.$product->id.'/edit')}}" class="btn btn-sm btn-success">Edit</a>
-                                <a href="{{ url('admin/products/'.$product->id.'/delete')}}" onclick="return confirm ('Are you sure, you want to delete this data?')"class="btn btn-sm btn-danger">Delete</a>
-                            </td>
-                        </tr>
-                        @empty
-                        <tr>
-                            <td colspan="7">
-                                No Products availabe
-                            </td>
-                        </tr>
-                            
-                        @endforelse
-                        
-                    </tbody>
-                </table>
-
-            </div>
-        </div>
-    </div>
+        </div><!-- /.container-fluid -->
+    </section>
 </div>
-
 
 @endsection

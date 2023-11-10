@@ -3,58 +3,21 @@
 * {
   font-family: "Poppins", sans-serif;
 }
-.footer-basic {
-    padding: 0px;
-    background-color:rgb(37, 179, 250);
-    color:rgb(37, 179, 250);
-    position: sticky;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    z-index: 2;
-  }
-  
-  .footer-basic ul {
-    padding:0;
-    list-style:none;
-    text-align:center;
-    font-size:18px;
-    line-height:1.6;
-    margin-bottom:0;
-  }
-  
-  .footer-basic li {
-    padding:0 10px;
-  }
-  
-  .footer-basic ul a {
-    color:inherit;
-    text-decoration:none;
-    opacity:0.8;
-  }
-  
 
-  
-  .footer-basic .copyright {
-    padding: 10px;
-    text-align:center;
-    font-size:13px;
-    color:#fff;
-    margin-bottom:0;
-  }
 </style>
 
-<div class="footer-basic">
-       {{-- <ul class="list-inline">
-            <li class="list-inline-item"><a href="#">Home</a></li>
-            <li class="list-inline-item"><a href="#">Services</a></li>
-            <li class="list-inline-item"><a href="#">About</a></li>
-            <li <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-        </ul> --}}
+{{-- <div class="footer-basic">
+
         <p class="copyright">PT. Mahir Tekno Utama © <script>document.write(/\d{4}/.exec(Date())[0])</script> </p>
 
-</div>
+</div> --}}
+
+<footer class="main-footer">
+  <strong>Copyright &copy; <script>document.write(/\d{4}/.exec(Date())[0])</script>  <a href="https://mahirtekno.co.id">PT. Mahir Tekno Utama © </a>.</strong>
+  <div class="float-right d-none d-sm-inline-block">
+    <b>Version</b> 1.0.0
+  </div>
+</footer>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

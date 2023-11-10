@@ -14,6 +14,7 @@ class Index extends Component
     protected $paginationTheme = 'bootstrap';
     
     public $category_id;
+    
     public function deleteCategory($category_id)
     {
         $this->category_id = $category_id;
@@ -22,7 +23,8 @@ class Index extends Component
     public function destroyCategory()
     {
         $category = Category::find($this->category_id);
-        $path = 'uploads/category/'.$category->image;
+        $path = $category->image;
+        
         if(File::exists($path)){
             File::delete($path);
         }

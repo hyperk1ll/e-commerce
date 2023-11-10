@@ -1,4 +1,4 @@
-<nav class="sidebar sidebar-offcanvas" id="sidebar">
+{{-- <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
       <li class="nav-item">
         <a class="nav-link" href="{{ url('admin/dashboard') }}">
@@ -40,80 +40,98 @@
         </a>
       </li>
 
-      {{-- <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link" href="{{ url('admin/admins') }}">
           <i class="bi bi-person menu-icon"></i>
           <span class="menu-title">Administrator</span>
         </a>
-      </li> --}}
+      </li>
 
     </ul>
-  </nav>
+  </nav> --}}
 
 
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="{{ url('admin/dashboard') }}" class="brand-link">
+      <img src="/images/mtu-mini.svg" alt="MTU Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">MTU Catalog</span>
+    </a>
 
+    <!-- Sidebar -->
+    <div class="sidebar">
 
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="{{ url('admin/dashboard') }}" class="nav-link">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Category
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ url('admin/category/create') }}" class="nav-link">
+                  <i class="nav-icon fas fa-edit"></i>
+                  <p>Add Category</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url('admin/category') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View Category</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Products
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ url('admin/products/create') }}" class="nav-link">
+                  <i class="nav-icon fas fa-edit"></i>
+                  <p>Add Product</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url('admin/products') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View Product</p>
+                </a>
+              </li>
+            </ul>
+          </li>
 
-<!-- ======= Sidebar ======= -->
-{{-- <aside id="sidebar" class="sidebar">
-
-  <ul class="sidebar-nav" id="sidebar-nav">
-
-    <li class="nav-item">
-      <a class="nav-link " href="{{ url('admin/dashboard') }}">
-        <i class="bi bi-grid"></i>
-        <span>Dashboard</span>
-      </a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link collapsed" data-bs-target="#category-nav" data-bs-toggle="collapse" href="#">
-        <i class="bi bi-menu-button-wide"></i><span>Category</span><i class="bi bi-chevron-down ms-auto"></i>
-      </a>
-      <ul id="category-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-        <li>
-          <a href="{{ url('admin/category/create') }}">
-            <i class="bi bi-circle"></i><span>Add Category</span>
-          </a>
-        </li>
-        <li>
-          <a href="{{ url('admin/category/') }}">
-            <i class="bi bi-circle"></i><span>View Category</span>
-          </a>
-        </li>
-      </ul>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link collapsed" data-bs-target="#product-nav" data-bs-toggle="collapse" href="#">
-        <i class="bi bi-journal-text"></i><span>Product</span><i class="bi bi-chevron-down ms-auto"></i>
-      </a>
-      <ul id="product-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-        <li>
-          <a href="{{ url('admin/products/create') }}">
-            <i class="bi bi-circle"></i><span>Add Product</span>
-          </a>
-        </li>
-        <li>
-          <a href="{{ url('admin/products/') }}">
-            <i class="bi bi-circle"></i><span>View Product</span>
-          </a>
-        </li>
-      </ul>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link collapsed" href="{{ url('admin/brands') }}">
-        <i class="bi bi-bar-chart"></i><span>Brand</span>
-      </a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link collapsed" href="{{ url('admin/admin') }}">
-        <i class="bi bi-person"></i>
-        <span>User</span>
-      </a>
-    </li>
-  </ul>
-   
-</aside> --}}
+          <li class="nav-item">
+            <a href="{{ url('admin/brands') }}" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Brands
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
