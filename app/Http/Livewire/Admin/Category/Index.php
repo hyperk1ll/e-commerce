@@ -36,6 +36,9 @@ class Index extends Component
     public function render()
     {
         $categories = Category::orderBy('id','ASC')->paginate(10);
-        return view('livewire.admin.category.index', ['categories'=>$categories]);
+        return view('livewire.admin.category.index', ['categories'=>$categories])
+                ->extends('layouts.admin')
+                ->section('content');
     }
+
 }

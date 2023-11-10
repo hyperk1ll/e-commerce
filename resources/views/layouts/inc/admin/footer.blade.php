@@ -13,10 +13,7 @@
 </div> --}}
 
 <footer class="main-footer">
-  <strong>Copyright &copy; <script>document.write(/\d{4}/.exec(Date())[0])</script>  <a href="https://mahirtekno.co.id">PT. Mahir Tekno Utama © </a>.</strong>
-  <div class="float-right d-none d-sm-inline-block">
-    <b>Version</b> 1.0.0
-  </div>
+    Copyright &copy; <script>document.write(/\d{4}/.exec(Date())[0])</script>  <a href="https://mahirtekno.co.id">PT. Mahir Tekno Utama</a>
 </footer>
 
 

@@ -90,10 +90,11 @@
 
     <script src="{{ asset('admin/vendors/datatables.net/jquery.dataTables.js') }}"></script>
     <script src="{{ asset('admin/vendors/datatables.net-bs4/dataTables.bootstrap4.js') }}"></script>
+    {{-- <script src="{{ asset('admin/vendors/base/perfect-scrollbar.min.js.map') }}"></script> --}}
 
     <script src="{{ asset('admin/js/off-canvas.js') }}"></script>
     <script src="{{ asset('admin/js/hoverable-collapse.js') }}"></script>
-    <script src="{{ asset('admin/js/template.js') }}"></script>
+    {{-- <script src="{{ asset('admin/js/template.js') }}"></script> --}}
 
     <script src="{{ asset('admin/js/dashboard.js') }}"></script>
     <script src="{{ asset('admin/js/data-table.js') }}"></script>
@@ -106,7 +107,7 @@
     <!-- REQUIRED SCRIPTS -->
 
     <!-- jQuery -->
-    <script src="{{ asset('admin/plugins/jquery/jquery.min.js') }}"></script>
+    {{-- <script src="{{ asset('admin/plugins/jquery/jquery.min.js') }}"></script> --}}
     <!-- Bootstrap -->
     <script src="{{ asset('admin/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- AdminLTE -->
