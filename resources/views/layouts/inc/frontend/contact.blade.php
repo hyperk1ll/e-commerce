@@ -61,63 +61,73 @@
             {{Session::get('success')}}
           </div>
         @endif
+        @if(isset($status) && $status === 'success')
+    <div class="alert alert-success">
+        {{ $message }}
+    </div>
+@elseif(isset($status) && $status === 'error')
+    <div class="alert alert-danger">
+        {{ $message }}
+    </div>
+@endif
 
-        <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-          <form action="https://api.emailjs.com/api/v1.0/email/send-form" method="POST" role="form" class="php-email-form">
-            <div class="row">
-              <div class="form-group col-md-6">
+<div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+    <form id="myForm" action="{{ route('send.email') }}" method="POST" role="form" class="php-email-form">
+        @csrf
+        <input type="hidden" name="text" id="mailgunText" value="">
+        <div class="row">
+            <div class="form-group col-md-6">
                 <label for="name">Your Name</label>
                 <input type="text" name="name" class="form-control" id="name" required>
-                  @if ($errors->has('name'))
-                      <span class="text-danger">{{ $errors->first('name') }}</span>
-                  @endif
-              </div>
-              <div class="form-group col-md-6">
+            </div>
+            <div class="form-group col-md-6">
                 <label for="email">Your Email</label>
                 <input type="email" class="form-control" name="email" id="email" required>
-                  @if ($errors->has('email'))
-                    <span class="text-danger">{{ $errors->first('email') }}</span>
-                  @endif
-              </div>
             </div>
-            <div class="form-group">
-              <label for="subject">Subject</label>
-              <input type="text" class="form-control" name="subject" id="subject" required>
-                @if ($errors->has('subject'))
-                  <span class="text-danger">{{ $errors->first('subject') }}</span>
-                @endif
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea class="form-control" name="message" rows="10" required></textarea>
-                @if ($errors->has('message'))
-                  <span class="text-danger">{{ $errors->first('message') }}</span>
-                @endif
-            </div>
-            <div class="my-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-            </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
-          </form>
         </div>
-  
+        <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" class="form-control" name="subject" id="subject" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" name="message" id="message" rows="10" required></textarea>
+        </div>
+        <div class="my-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your message has been sent. Thank you!</div>
+        </div>
+        <div class="text-center">
+            <button type="button" id="sendMessageButton">Send Message</button>
+        </div>
+    </form>
+</div>
 
-      </div>
-
-    </div>
-  </section><!-- End Contact Section -->
-
-  <script>
-        // Mendapatkan referensi ke tombol "Send Message"
-    const sendButton = document.querySelector('.text-center .[type="submit"]');
-
-    // Menambahkan event listener ke tombol "Send Message"
-    sendButton.addEventListener('click', (event) => {
-      event.preventDefault(); // Mencegah form dikirim secara default
-      // Panggil fungsi untuk mengirim email
-      sendEmail();
+<script defer>
+    document.getElementById('sendMessageButton').addEventListener('click', function () {
+        prepareAndSubmit();
     });
-  </script>
-  <script src="/mtu-catalog/resources/js/email.js"></script>
+
+    function prepareAndSubmit() {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var subject = document.getElementById('subject').value;
+        var message = document.getElementById('message').value;
+
+        // Form validation (you may want to add more validation)
+        if (!name || !email || !subject || !message) {
+            alert('Please fill in all fields.');
+            return;
+        }
+
+        // Set values for Mailgun API
+        document.getElementById('mailgunText').value = message + ' sent by ' + email;
+
+        // Log to console to check if the function is being called
+        console.log('Preparing and submitting...');
+
+        // Submit the form
+        document.getElementById('myForm').submit();
+    }
+</script>

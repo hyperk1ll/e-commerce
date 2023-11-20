@@ -7,7 +7,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Models\Slider;
 use App\Models\Brand;
 use App\Models\Product;
-
+use App\Http\Controllers\MailgunController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,7 +28,7 @@ Route::get('/', function () {
 
 Route::get('contact-us', [ContactController::class, 'index']);
 Route::post('contact-us', [ContactController::class, 'store'])->name('contact.us.store');
-
+Route::post('/send-email', [MailgunController::class, 'sendEmail'])->name('send.email');
 
 Route::get('/collections/{category_slug}', function ($category_slug) {
     $category = \App\Models\Category::where('slug', $category_slug)->first();
