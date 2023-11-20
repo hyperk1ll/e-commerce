@@ -24,7 +24,7 @@
                     <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th> ID</th>
+                                <th> No</th>
                                 <th> Name </th>
                                 <th> Status </th>
                                 <th> Action </th>
@@ -33,7 +33,7 @@
                         <tbody>
                             @foreach ($categories as $category)
                             <tr>
-                                <td>{{ $category->id }}</td>
+                                <td>{{ (($categories->currentPage() - 1 ) * $categories->perPage() ) + $loop->iteration }}</td>
                                 <td>{{ $category->name }}</td>
                                 <td>{{ $category->status == '1' ? 'Hidden':'Visible' }}</td>
                                 <td>

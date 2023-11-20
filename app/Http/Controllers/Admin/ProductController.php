@@ -83,14 +83,14 @@ class ProductController extends Controller
     {
         $categories = Category::all();
         $brands = Brand::all();
-        $product = Product::findOrFail($product_id);
+        $product = Product::find($product_id);
         return view('admin.products.edit', compact('categories', 'brands', 'product'));
     }
     public function update(ProductFormRequest $request, int $product_id)
     {
         $validateData = $request->validated();
-        $product = Category::findOrFail($validateData['category_id'])
-                        ->products()->where('id', $product_id)->first();
+        $product = Product::find($product_id);
+        
         if($product)
         {
             $product->update([

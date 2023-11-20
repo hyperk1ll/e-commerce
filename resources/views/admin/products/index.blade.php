@@ -28,7 +28,7 @@
                             <table class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
+                                        <th>No</th>
                                         <th>Category</th>
                                         <th>Product</th>
                                         <th>Price</th>
@@ -40,7 +40,9 @@
                                 <tbody>
                                     @forelse ($products as $product)
                                     <tr>
-                                        <td>{{$product->id}}</td>
+                                        {{-- <td>{{ (($products->currentPage() - 1 ) * $products->perPage() ) + $loop->iteration }}</td> --}}
+                                        <td>{{ $loop->iteration }}</td>
+                                        {{-- <td>{{$product->id}}</td> --}}
                                         <td>
                                             @if($product->category)
                                             {{$product->category->name}}
