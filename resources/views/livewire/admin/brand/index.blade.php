@@ -20,7 +20,7 @@
                                 <table class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
+                                            <th>No</th>
                                             <th>Name</th>
                                             <th>Category</th>
                                             <th>Slug</th>
@@ -31,7 +31,8 @@
                                     <tbody>
                                         @forelse ($brands as $brand)
                                         <tr>
-                                            <td>{{ $brand->id }}</td>
+                                            <td>{{ (($brands->currentPage() - 1 ) * $brands->perPage() ) + $loop->iteration }}</td>
+                                            {{-- <td>{{ $brand->id }}</td> --}}
                                             <td>{{ $brand->name }}</td>
                                             <td>
                                                 @if($brand->category_id)
