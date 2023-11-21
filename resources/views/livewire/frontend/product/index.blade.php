@@ -54,7 +54,7 @@
                             </a>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">{{ $productItem->brand }}</p>
+                            {{-- <p class="card-text">{{ $productItem->brand }}</p> --}}
                             <h5 class="card-title">{{ $productItem->name }}</h5>
                             @if($productItem->selling_price != $productItem->original_price)
                             <p class="card-text">
