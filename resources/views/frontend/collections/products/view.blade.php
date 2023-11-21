@@ -4,6 +4,9 @@
 {{ $product->name }}
 @endsection
 
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="{{  asset('admin/images/mtu.transparent.png') }}" />
+
 @include('layouts.inc.frontend.navbar2')
 
 @section('content')
