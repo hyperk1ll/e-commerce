@@ -5,7 +5,6 @@
 @section('content')
 @include('layouts.inc.frontend.navbar')
 @include('layouts.inc.frontend.slider')
-
 @include('layouts.inc.frontend.client')
 @include('layouts.inc.frontend.review')
 @include('layouts.inc.frontend.trending')

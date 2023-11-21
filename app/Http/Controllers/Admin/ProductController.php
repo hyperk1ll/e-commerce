@@ -64,7 +64,7 @@ class ProductController extends Controller
                 $size = min($image->width(), $image->height());
                 $image->resizeCanvas($size, $size);
                 $image->crop($size, $size);
-                $image->resize(400, 400, function ($constraint) {
+                $image->resize(500, 500, function ($constraint) {
                     $constraint->aspectRatio();
                 });
                 $image->save($finalImagePathName);
@@ -124,7 +124,7 @@ class ProductController extends Controller
                 $size = min($image->width(), $image->height());
                 $image->resizeCanvas($size, $size);
                 $image->crop($size, $size);
-                $image->resize(400, 400, function ($constraint) {
+                $image->resize(500, 500, function ($constraint) {
                     $constraint->aspectRatio();
                 });
                 $image->save($finalImagePathName);

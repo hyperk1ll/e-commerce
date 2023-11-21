@@ -11,7 +11,13 @@ class FrontEndController extends Controller
 {
     public function index()
     {
-        $trendingProducts = Product::where('trending','1')->latest()->take(10)->get();
+        $trendingProducts = Product::where('trending','1')->where('status','0')
+        ->latest()
+        ->take(10)
+        ->get();
+
+        // dd($trendingProducts);
+        
         return view('frontend.index', compact('trendingProducts'));
     }
 
@@ -57,13 +63,16 @@ class FrontEndController extends Controller
     }
     public function searchProducts(Request $request){
         if($request->search){
-            $searchProducts = Product::where('name', 'LIKE', '%'.$request->search.'%')
-                ->orWhere('brand', 'LIKE', '%'.$request->search.'%')
-                ->orWhere(function ($query) use ($request) {
-                    $query->whereHas('category', function ($query) use ($request) {
-                        $query->where('name', 'LIKE', '%'.$request->search.'%');
+            $searchProducts = Product::where('status', '0')
+            ->where(function ($query) use ($request) {
+                $query->where('name', 'LIKE', '%' . $request->search . '%')
+                    ->orWhere('brand', 'LIKE', '%' . $request->search . '%')
+                    ->orWhere(function ($query) use ($request) {
+                        $query->whereHas('category', function ($query) use ($request) {
+                            $query->where('name', 'LIKE', '%' . $request->search . '%');
+                        });
                     });
-                })
+            })
                 ->orderBy('name')
                 ->paginate(15);
             return view('frontend.pages.search', compact('searchProducts'));
