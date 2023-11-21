@@ -1,8 +1,11 @@
 @extends('layouts.app')
 
 @section('title')
-{{ $category->name }}
+Category - {{ $category->name }}
 @endsection
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="{{  asset('admin/images/mtu.transparent.png') }}" />
 
 @include('layouts.inc.frontend.navbar2')
 @section('content')
