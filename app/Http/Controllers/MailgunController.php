@@ -25,9 +25,18 @@ use Mailgun\HttpClient\HttpClientConfigurator;
             // Make the call to the client
             $result = $mgClient->messages()->send($domain, [
                 'from'    => "PKL Hyperkill <mailgun@{$domain}>",
-                'to'      => "luxiaxu12@gmail.com",
+                'to'      => "oby.aubrey@gmail.com",
                 'subject' => $subject,
-                'text'    => "{$message} sent by {$email}",
+                'text'    => "
+                Hi,
+
+                You've received a message from {$name}:
+                
+                -------------------------
+                {$message}
+                -------------------------
+                
+                Sent by: {$email}",
             ]);
     
             // Display the data
