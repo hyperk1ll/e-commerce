@@ -59,7 +59,7 @@
                             @if($productItem->selling_price != $productItem->original_price)
                             <p class="card-text">
                                 <span class="selling-price font-weight-bold"><?php echo "Rp " . number_format("$productItem->selling_price", 0, ",", "."); ?> </span>
-                                <span class="original-price text-muted"><?php echo "Rp " . number_format("$productItem->original_price", 0, ",", "."); ?></span>
+                                {{-- <span class="original-price text-muted"><?php echo "Rp " . number_format("$productItem->original_price", 0, ",", "."); ?></span> --}}
                             </p>
                             @else
                             <p class="card-text">
