@@ -39,8 +39,11 @@ use Mailgun\HttpClient\HttpClientConfigurator;
                 Sent by: {$email}",
             ]);
     
-            // Display the data
-            dd($result);
+            // // Display the data
+            // dd($result);
+
+            // return redirect()->back();
+
     
             // The script will exit here, and the view won't be returned.
         }

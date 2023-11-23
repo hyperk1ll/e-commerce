@@ -99,7 +99,7 @@
             <div class="sent-message">Your message has been sent. Thank you!</div>
         </div>
         <div class="text-center">
-            <button type="button" id="sendMessageButton">Send Message</button>
+            <button type="button" class="btn btn-primary" id="sendMessageButton">Send Message</button>
         </div>
     </form>
 </div>
@@ -129,5 +129,12 @@
 
         // Submit the form
         document.getElementById('myForm').submit();
+
+        // alert in case the form submission is successful
+        alert('Thank you for your message. We will get back to you soon.');
+
+        // redirect to homepage
+        window.location.href = '/';
+
     }
 </script>
