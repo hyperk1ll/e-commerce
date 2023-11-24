@@ -86,7 +86,7 @@ margin-bottom: 20px;
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label>Hide</label><br/>
-                                        <input type="checkbox" name="status" {{$category->status == '1' ? 'checked' :''}}/>
+                                        <input type="checkbox" name="status" {{$category->status == '1' ? 'checked' :''}} style="width: 25px; height: 25px;">
                                         @error('status') <small class="text-danger">{{$message}} </small>@enderror
                                     </div>
 

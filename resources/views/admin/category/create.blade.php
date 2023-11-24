@@ -51,7 +51,7 @@
                                     {{-- Status --}}
                                     <div class="col-md-6 mb-3">
                                         <label>Hide</label><br/>
-                                        <input type="checkbox" name="status">
+                                        <input type="checkbox" name="status" style="width: 25px; height: 25px;">
                         
                                     </div>
 

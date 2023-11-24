@@ -33,8 +33,8 @@
                         @error('slug') <small class="text-danger">{{ $message }}</small> @enderror
                     </div>
                     <div class="mb-3">
-                        <label>Brand Status</label>
-                        <input type="checkbox" wire:model.defer="status" /> Checked=Hidden, Un-Checked=Visible
+                        <label>Hide Brand</label>
+                        <input type="checkbox" wire:model.defer="status" style="width: 25px; height: 25px;">
                         @error('status') <small class="text-danger">{{ $message }}</small> @enderror
                     </div>
                 </div>
@@ -91,8 +91,8 @@
                             @error('slug') <small class="text-danger">{{ $message }}</small> @enderror
                         </div>
                         <div class="mb-3">
-                            <label>Brand Status</label>
-                            <input type="checkbox" wire:model.defer="status" /> Checked=Hidden, Un-Checked=Visible
+                            <label>Hide Brand</label>
+                            <input type="checkbox" wire:model.defer="status" style="width: 25px; height: 25px;">
                             @error('status') <small class="text-danger">{{ $message }}</small> @enderror
                         </div>
                     </div>

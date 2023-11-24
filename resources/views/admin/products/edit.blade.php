@@ -118,7 +118,7 @@
                                             <div class="col-md-4">
                                                 <div class="mb-3">
                                                     <label>Hide</label>
-                                                    <input type="checkbox" name="status"  {{$product->status == '1' ? 'checked':''}}style="width: 25px; height: 25px;">
+                                                    <input type="checkbox" name="status" {{$product->status == '1' ? 'checked' : ''}} style="width: 25px; height: 25px;">
                                                 </div>
                                             </div>
 
